@@ -1,9 +1,9 @@
 # Interactive Campus Map
 
 ## Required Libraries
-* Folium
-* QtPy5
-* PyQtWebEngine
+* Folium - pip instal fplium
+* PyQt5 - pip install PyQt5
+* PyQtWebEngine - pip install PyQtWebEngine
 
 
 
