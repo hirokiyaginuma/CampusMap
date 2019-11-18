@@ -1,0 +1,64 @@
+<html>
+<style>
+body {
+  background-image: url('map.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<head>
+	<title>
+		Events
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+	<div id='imgFrame' style="height: 250px; background-color: gray; position: fixed; bottom: 20; left: 0; right: 0;">
+		<img style='height: 100%; display: block; margin-left: auto; margin-right: auto;' src='1.jpg'>
+
+	</div>
+	<div id='selectorFrame' style="height: 20px; background-color: black; position: fixed; bottom: 0; left: 0; right: 0; text-align: center;">
+	</div>
+
+	<script>
+		var i = 1;
+		var imageCount = 5;
+		var Imageval;
+		var radStr = "";
+		var time = 6000;
+		//https://stackoverflow.com/questions/29340664/javascript-retrieve-names-of-files-in-a-folder
+
+
+		window.onload = function()
+		{
+
+			for(var k = 0; k < imageCount; k++)
+			{
+				z = k+1;
+				radStr  += "<input type='radio' name='imgNum' value='" + z + "' onclick='clearInterval(Imageval); i = " + z + "; changeImage(); Imageval = setInterval(function(){ changeImage() }, time);'>";
+			}
+			document.getElementById('selectorFrame').innerHTML = radStr;
+			document.getElementsByName('imgNum')[i - 1].checked = true;
+			i++;
+			Imageval = setInterval(function(){ changeImage() }, time);
+		}
+		function changeImage()
+		{
+			document.getElementById('imgFrame').innerHTML = "<img style='height: 100%; display: block; margin-left: auto; margin-right: auto;' src='./" + i + ".jpg'>";
+			document.getElementsByName('imgNum')[i - 1].checked = true;
+			if (i < imageCount)
+			{
+				i++;
+			}
+			else
+			{
+				i = 1;
+			}
+		}
+	</script>
+
+</body>
+</html>

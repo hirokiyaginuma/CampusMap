@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_67718d5c15a14a65b683d960464317ec {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_67718d5c15a14a65b683d960464317ec" ></div>
+        
+</body>
+<script>    
+    
+            var map_67718d5c15a14a65b683d960464317ec = L.map(
+                "map_67718d5c15a14a65b683d960464317ec",
+                {
+                    center: [32.3158, -95.2544],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[32.30979, -95.239071], [32.32124, -95.260618]],
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f1c65842b86342549321241981f3061b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 16, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_67718d5c15a14a65b683d960464317ec);
+        
+    
+            var marker_ec2c60bf88f9496b8200b67ea884761b = L.marker(
+                [32.31595, -95.252574],
+                {}
+            ).addTo(map_67718d5c15a14a65b683d960464317ec);
+        
+    
+            var icon_9f51920651754e4384b7df07d1449cc0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ec2c60bf88f9496b8200b67ea884761b.setIcon(icon_9f51920651754e4384b7df07d1449cc0);
+        
+    
+        var popup_22cc6a46bd414740b4d2b67aeac55c5e = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            var html_2be46d5fd2af4f89945c38a766a00c8b = $(`<div id="html_2be46d5fd2af4f89945c38a766a00c8b" style="width: 100.0%; height: 100.0%;">You are here!</div>`)[0];
+            popup_22cc6a46bd414740b4d2b67aeac55c5e.setContent(html_2be46d5fd2af4f89945c38a766a00c8b);
+        
+
+        marker_ec2c60bf88f9496b8200b67ea884761b.bindPopup(popup_22cc6a46bd414740b4d2b67aeac55c5e)
+        ;
+
+        
+    
+    
+            var layer_control_f8cd3d6ca3e64e8798849a2924719017 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f1c65842b86342549321241981f3061b,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_f8cd3d6ca3e64e8798849a2924719017.base_layers,
+                layer_control_f8cd3d6ca3e64e8798849a2924719017.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_67718d5c15a14a65b683d960464317ec);
+        
+    
+            var circle_marker_7910cbf2eaa44c65b2357150e47245c3 = L.circleMarker(
+                [32.314358, -95.251427],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Orange", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_67718d5c15a14a65b683d960464317ec);
+        
+    
+            circle_marker_7910cbf2eaa44c65b2357150e47245c3.bindTooltip(
+                `<div>
+                     Ornelas Residence Hall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_454f9310c3034fefb45c21a256242f2e = L.circleMarker(
+                [32.313234, -95.251733],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_67718d5c15a14a65b683d960464317ec);
+        
+    
+        var popup_b26fc69a4a154a7090a220524e3aa650 = L.popup({"maxWidth": 300, "minHeight": 900, "minWidth": 300});
+
+        
+            var html_b20ffd2510c24d109ffff6b5289f0169 = $(`<div id="html_b20ffd2510c24d109ffff6b5289f0169" style="width: 100.0%; height: 100.0%;"><a href=http://www.uttyler.edu>UT Tyler Website</a><p>Room List:<br>Floor 1: 100-199<br>Floor 2: 200-299<br>Floor 3: 300-399<br>Floor 4: 400-499</p></div>`)[0];
+            popup_b26fc69a4a154a7090a220524e3aa650.setContent(html_b20ffd2510c24d109ffff6b5289f0169);
+        
+
+        circle_marker_454f9310c3034fefb45c21a256242f2e.bindPopup(popup_b26fc69a4a154a7090a220524e3aa650)
+        ;
+
+        
+    
+    
+            circle_marker_454f9310c3034fefb45c21a256242f2e.bindTooltip(
+                `<div>
+                     Soules College of Business and Technology
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5e9669f203ad4582940c71e9d6d86a33 = L.marker(
+                [32.3158, -95.2544],
+                {}
+            ).addTo(map_67718d5c15a14a65b683d960464317ec);
+        
+    
+            var icon_fef43e4fb3484d328a12c95e9d93ef19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5e9669f203ad4582940c71e9d6d86a33.setIcon(icon_fef43e4fb3484d328a12c95e9d93ef19);
+        
+    
+        var popup_8b4909ba68a2451eb8d7858f941a6088 = L.popup({"maxWidth": 300});
+
+        
+            var html_1d8196ac03d645e3aebb8b3be45e6ccf = $(`<div id="html_1d8196ac03d645e3aebb8b3be45e6ccf" style="width: 100.0%; height: 100.0%;"><a href=https://openweathermap.org/city/4738214>Current Weather</a></div>`)[0];
+            popup_8b4909ba68a2451eb8d7858f941a6088.setContent(html_1d8196ac03d645e3aebb8b3be45e6ccf);
+        
+
+        marker_5e9669f203ad4582940c71e9d6d86a33.bindPopup(popup_8b4909ba68a2451eb8d7858f941a6088)
+        ;
+
+        
+    
+    
+            marker_5e9669f203ad4582940c71e9d6d86a33.bindTooltip(
+                `<div>
+                     Weather
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
