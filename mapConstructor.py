@@ -1,6 +1,8 @@
 import os
 import folium
+import csv
 
+from folium import FeatureGroup, LayerControl, Map, Marker
 
 class MapConstructor:
     def __init__(self):
@@ -14,18 +16,42 @@ class MapConstructor:
         # UT lat, lon
         UTTCoords = (32.3158, -95.2544)
 
+        #The idea will be to read in from the file the room numbers and assign them to the appropriate building.
+        #I will also link the building code to the building to begin building the basic search functionality.
+
+        filePath = 'mapfile/roomList/roomList.csv'
+        with open(filePath) as roomListFile:
+            roomList = csv.reader(roomListFile, delimiter=',')
+
+            buildCodes = []
+            roomNum = []
+            roomType = []
+            roomFloor = []
+
+            for row in roomList:
+                buildCodes.append(row[0])
+                roomNum.append(row[1].lstrip('0'))
+                roomType.append(row[2])
+                roomFloor.append(row[1].lstrip('0')[0])
+
+
+
         # Create map object
         UTmap = folium.Map(location=UTTCoords, zoom_start=16, tiles="OpenStreetMap", min_zoom=16, min_lat=32.309790,
                            max_lat=32.32124, min_lon=-95.239071, max_lon=-95.260618, max_bounds=True, zoom_control=True)
 
         hereTxt = folium.Html('You are here!', script=True)
-        hereWindow = folium.Popup(hereTxt, max_width=300, min_width=300)
+        hereWindow = folium.Popup(hereTxt, max_width=300)
         hereIcon = folium.Icon(color='red', icon='info-sign')
         folium.Marker(location=[32.315950, -95.252574], popup=hereWindow, icon=hereIcon).add_to(UTmap)
 
         #
         # #Interactive Map location
         # folium.Marker(location=[32.315950,-95.252574], tooltip='You are here', color='black', fill_color='Yellow', fill_opacity=1).add_to(UTmap)
+
+
+        floorListOverlay = FeatureGroup(name="Floor List")
+
 
         # Adding buildings
         folium.LayerControl().add_to(UTmap)
@@ -36,21 +62,46 @@ class MapConstructor:
                             fill=True).add_to(UTmap)
 
         # This is the first version. Here for reference.
-
         # Soules College of Business and Technology
         # folium.CircleMarker(location=[32.313234,-95.251733], tooltip='Soules College of Business and Technology',
         #                        radius=10, color='black', weight=1, fill_color='Blue', fill_opacity=0.5, fill=True, ).add_to(UTmap)
 
-        soulesTxt = folium.Html('<a href=http://www.uttyler.edu>UT Tyler Website</a>'
-                                '<p>Room List:<br>Floor 1: 100-199<br>Floor 2: 200-299<br>Floor 3: 300-399<br>Floor 4: 400-499</p>',
+
+
+        #okay, check each building code and match it to the building name. Then take the roomNum at the same index
+        #and put it in a list of the correct floor
+
+        COBFloor1 = 'Floor 1:<br><br>'
+        COBFloor2 = 'Floor 2:<br><br>'
+        COBFloor3 = 'Floor 3:<br><br>'
+
+        for i, build in enumerate(buildCodes):
+            if build == 'COB' and roomFloor[i] == '1':
+                COBFloor1 += '<nbsp>Room Number: ' + roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + roomType[i] + '<br>'
+            elif build == 'COB' and roomFloor[i] == '2':
+                COBFloor2 += 'Room Number: ' + roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + roomType[i] + '<br>'
+            elif build == 'COB' and roomFloor[i] == '3':
+                COBFloor3 += 'Room Number: ' + roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + roomType[i] + '<br>'
+
+        COBhtml = """
+            <h1>SOULES COLLEGE OF BUSINESS</h1><br>
+            <p>""" + COBFloor1 + "<br><br>" + COBFloor2 + "<br><br>" + COBFloor3 + "<br><br>" + """
+            </p>
+            """
+
+
+        soulesTxt = folium.Html(COBhtml,
                                 script=True)
-        soulesWindow = folium.Popup(soulesTxt, max_width=300, min_width=300, min_height=900)
+
+        soulesWindow = folium.Popup(html=soulesTxt, min_width=400, max_width=900, max_height=300, parse_html=True)
         soulesIcon = folium.Icon(color='purple', icon='star')
 
         # Clickable marker
-        folium.CircleMarker(location=[32.313234, -95.251733], tooltip='Soules College of Business and Technology',
+        COB = folium.CircleMarker(location=[32.313234, -95.251733], tooltip='Soules College of Business and Technology',
                             radius=10, color='black', weight=1, fill_color='Blue', fill_opacity=0.5, fill=True,
-                            popup=soulesWindow).add_to(UTmap)
+                            popup=soulesWindow)
+        COB.add_to(UTmap)
+
 
         # This isn't really what we want to do, more just a proof of concept. We need to get an API key from OpenWeather and
         # then display the current weather in a window that is in a fixed location on the window of the screen (eg. upper right)

@@ -1,0 +1,2292 @@
+Building,Room,Type
+ALH,00101,Circulation Area
+ALH,00102,Circulation Area
+ALH,00103,Circulation Area
+ALH,00105,Meeting Room
+ALH,00106,Meeting Room Service
+ALH,00108,Meeting Room
+ALH,00110,Meeting Room Service
+ALH,00111,Circulation Area
+ALH,00113,Meeting Room
+ALH,00114,Meeting Room Service
+ALH,00115,Circulation Area
+ALH,00116,Mens Public Restroom
+ALH,00117,Womens Public Restroom
+ALH,00119,Circulation Area
+ALH,00120,Meeting Room Service
+ALH,00200,Circulation Area
+ALH,00206,Stairway
+ALH,00207,Circulation Area
+ALH,00215,Unisex Restroom
+ALH,00202,Office
+ALH,00210,Office
+ALH,00201,Office
+ALH,00208,Office
+ALH,00211,Office
+ALH,211.01,Office
+ALH,00104,Office
+ALH,00118,Office Service
+ALH,00121,Office Service
+ALH,00122,Circulation Area
+ALH,00203,Office
+ALH,00209,Office Service
+ALH,00212,Office
+ALH,00213,Circulation Area
+ALH,00214,Office Service
+ALH,201.01,Office
+ALH,203.01,Office
+ALH,208.01,Office
+ARC,00110,Mens Public Restroom
+ARC,00111,Womens Public Restroom
+ARC,00112A,Lobby
+ARC,00112B,Lobby
+ARC,00113,Classroom Service
+ARC,00131,Mens Public Restroom
+ARC,00132,Womens Public Restroom
+ARC,00144,Special Class Lab Service
+ARC,00146,Public Corridor
+ARC,00147,Womens Public Restroom
+ARC,00148,Mens Public Restroom
+ARC,00156,Special Class Lab Service
+ARC,00162,Public Corridor
+ARC,00163,Womens Public Restroom
+ARC,00165,Mens Public Restroom
+ARC,00171,Lobby
+ARC,00172,Public Corridor
+ARC,00128,Special Class Lab
+ARC,00159,Individual Study Lab Srv
+ARC,00160,Individual Study Lab Srv
+ARC,00103,Special Class Lab Service
+ARC,00107,Office
+ARC,00115,Office
+ARC,00116,Office
+ARC,00117,Office
+ARC,00118,Special Class Lab Service
+ARC,00120,Office
+ARC,00121,Office Service
+ARC,00127,Office
+ARC,00129,Special Class Lab Service
+ARC,00134,Special Class Lab Service
+ARC,00135,Office
+ARC,00136,Public Corridor
+ARC,00138,Office
+ARC,00140,Office
+ARC,00124,Office Service
+ARC,00101,Special Class Lab
+ARC,00102,Office
+ARC,00106,Special Class Lab Service
+ARC,00108,Special Class Lab
+ARC,00109,Exhibition
+ARC,00122,Office
+ARC,00123,Conference Room
+ARC,00126,Special Class Lab
+ARC,00133,Special Class Lab
+ARC,00137,Special Class Lab
+ARC,00139,Special Class Lab
+ARC,00142,Lounge
+ARC,00143,Special Class Lab
+ARC,00161,Office
+ARC,00153,Special Class Lab
+ARC,00154,Special Class Lab Service
+ARC,00158,Individual Study Lab
+ARC,00112,Classroom
+ARC,00166,Individual Study Lab
+ARC,00167,Individual Study Lab Srv
+ARC,00168,Special Class Lab Service
+ARC,00169,Office
+ARC,00170,Special Class Lab
+ARC,00114,Classroom
+ARC,00141,Special Class Lab
+BEP,00100,Lobby
+BEP,00101,Public Corridor
+BEP,00108,Public Corridor
+BEP,00110,Womens Public Restroom
+BEP,00111,Mens Public Restroom
+BEP,00112,Merchandising
+BEP,00113,Stairway
+BEP,00119,Public Corridor
+BEP,00122,Animal Facilities
+BEP,00123,Stairway
+BEP,00133,Non-Class Lab
+BEP,00201,Public Corridor
+BEP,00203,Public Corridor
+BEP,00207,Public Corridor
+BEP,00208,Womens Public Restroom
+BEP,00209,Mens Public Restroom
+BEP,00211,Stairway
+BEP,00212,Lobby
+BEP,00215,Classroom
+BEP,00216,Public Corridor
+BEP,00218,Classroom
+BEP,00218A,Classroom Service
+BEP,00220,Office Service
+BEP,00222,Office Service
+BEP,00222B,Office
+BEP,00222C,Office
+BEP,00224,Conference Room
+BEP,00225,Public Corridor
+BEP,00228,Stairway
+BEP,00230,Public Corridor
+BEP,00234,Public Corridor
+BEP,00242,Public Corridor
+BEP,00247I,Office Service
+BEP,00250,Conference Room
+BEP,00219,Conference Room
+BEP,00126A,Non-Class Lab Srv
+BEP,00126B,Non-Class Lab Srv
+BEP,00134,Office
+BEP,00137,Non-Class Lab Srv
+BEP,00137A,Class Laboratory Srv
+BEP,00138,Class Laboratory Srv
+BEP,00217,Office
+BEP,00222D,Office Service
+BEP,00229E,Office Service
+BEP,00249,Reading Study Room
+BEP,00103,Office
+BEP,00104,Office
+BEP,00105,Office
+BEP,00107,Office
+BEP,00109,Non-Class Lab
+BEP,00109A,Non-Class Lab
+BEP,00109B,Non-Class Lab
+BEP,00109C,Non-Class Lab
+BEP,00109D,Non-Class Lab
+BEP,00114,Office
+BEP,00116,Non-Class Lab
+BEP,00118,Non-Class Lab
+BEP,00120,Non-Class Lab
+BEP,00126,Non-Class Lab
+BEP,00129A,Office
+BEP,00129B,Office
+BEP,00132A,Special Class Lab Service
+BEP,00132C,Special Class Lab Service
+BEP,00136,Non-Class Lab
+BEP,00140,Conference Room
+BEP,00202,Office Service
+BEP,00204A,Individual Study Lab
+BEP,00204B,Individual Study Lab
+BEP,00204C,Individual Study Lab
+BEP,00205,Individual Study Lab
+BEP,00212A,Office
+BEP,00212B,Office
+BEP,00212C,Office
+BEP,00212D,Office
+BEP,00212E,Office
+BEP,00221,Office
+BEP,00223,Office
+BEP,00226,Office
+BEP,00227,Office
+BEP,00229F,Office
+BEP,00235,Office
+BEP,00237,Office
+BEP,00238,Office
+BEP,00240,Office
+BEP,00241,Office
+BEP,00243,Office
+BEP,00244,Office
+BEP,00245,Office
+BEP,00246,Office
+BEP,00247A,Office
+BEP,00247B,Office Service
+BEP,00247C,Office
+BEP,00247D,Office
+BEP,00247E,Office
+BEP,00247F,Office
+BEP,00247G,Office
+BEP,00247H,Office
+BEP,00247J,Office
+BEP,00247K,Office
+BEP,00248,Non-Class Lab Srv
+BEP,00248B,Non-Class Lab
+BEP,00248C,Office
+BEP,00251,Office Service
+BEP,00251A,Office Service
+BEP,00252,Office
+BEP,00253,Office
+BEP,00254,Office
+BEP,00141,Public Corridor
+BEP,00144,Class Laboratory
+BEP,00114A,Public Corridor
+BEP,00204,Office
+BEP,00248A,Office
+BEP,00141A,Public Corridor
+BEP,00143,Class Laboratory Srv
+BEP,00148,Office
+BEP,00149,Office
+BEP,00150,Unisex Restroom
+BEP,00151,Unisex Restroom
+BEP,00229,Special Class Lab Service
+BEP,00229A,Special Class Lab
+BEP,00229B,Special Class Lab
+BEP,00229C,Special Class Lab
+BEP,00229D,Special Class Lab
+BEP,00229G,Special Class Lab Service
+BEP,00231,Special Class Lab Service
+BEP,00231A,Special Class Lab
+BEP,00231B,Special Class Lab
+BEP,00231C,Special Class Lab
+BEP,00231D,Special Class Lab
+BEP,00255,Public Corridor
+BEP,00255A,Public Corridor
+BEP,00257,Non-Class Lab
+BEP,00259,Non-Class Lab
+BEP,00259A,Non-Class Lab Srv
+BEP,00260,Non-Class Lab
+BEP,00260A,Non-Class Lab Srv
+BEP,00262,Office
+BEP,00263,Office
+BEP,00264,Office
+BEP,00126C,Non-Class Lab Srv
+BEP,00127,Office Service
+BEP,00232,Conference Room
+BEP,00213,Classroom
+BEP,00124,Special Class Lab
+BEP,00125,Class Laboratory
+BEP,00128,Special Class Lab
+BEP,00129,Special Class Lab
+BEP,00139,Special Class Lab
+BEP,00142,Special Class Lab
+BEP,00256,Non-Class Lab
+BEP,00222A,Office
+BEP,00117,Class Laboratory Srv
+BEP,00121,Non-Class Lab Srv
+BEP,00131,Non-Class Lab
+BEP,00132,Class Laboratory
+BEP,00135,Office
+BRB,01030,Classroom
+BRB,01000,Public Corridor
+BRB,01020,Public Corridor
+BRB,01060,Public Corridor
+BRB,01065,Womens Public Restroom
+BRB,01070,Mens Public Restroom
+BRB,01080,Public Corridor
+BRB,01095,Office
+BRB,01105,Office
+BRB,01110,Office
+BRB,01130,Office
+BRB,01140,Public Corridor
+BRB,01155,Office
+BRB,01160,Office
+BRB,01170,Public Corridor
+BRB,02000,Lobby
+BRB,02005,Public Corridor
+BRB,02070,Public Corridor
+BRB,02110,Public Corridor
+BRB,02140,Womens Public Restroom
+BRB,02150,Mens Public Restroom
+BRB,02165,Public Corridor
+BRB,02200,Public Corridor
+BRB,02235,Public Corridor
+BRB,02240,Public Corridor
+BRB,02305,Mens Public Restroom
+BRB,02315,Womens Public Restroom
+BRB,02335,Public Corridor
+BRB,02360,Public Corridor
+BRB,02365,Womens Public Restroom
+BRB,02370,Mens Public Restroom
+BRB,02375,Public Corridor
+BRB,02425,Class Laboratory Srv
+BRB,02445,Public Corridor
+BRB,02475,Special Class Lab Service
+BRB,02500,Office
+BRB,02505,Office
+BRB,02515,Public Corridor
+BRB,01040,Special Class Lab
+BRB,02151,Office Service
+BRB,01055,Classroom
+BRB,02035,Office
+BRB,02045,Office
+BRB,02050,Office
+BRB,02060,Office
+BRB,02065,Office
+BRB,02080,Office
+BRB,02085,Office
+BRB,02090,Office
+BRB,02115,Office
+BRB,02135,Office
+BRB,02145,Office
+BRB,02155,Office
+BRB,02185,Conference Room
+BRB,02210,Office
+BRB,02250,Office
+BRB,02255,Office
+BRB,02260,Office
+BRB,02270,Office
+BRB,02290,Office
+BRB,02385,Class Laboratory Srv
+BRB,02420,Office
+BRB,02326,Conference Room
+BRB,02180,Office
+BRB,02450,Special Class Lab
+BRB,02455,Special Class Lab
+BRB,02460,Special Class Lab
+BRB,02465,Special Class Lab
+BRB,02470,Special Class Lab
+BRB,02480,Special Class Lab
+BRB,02485,Special Class Lab
+BRB,02490,Special Class Lab
+BRB,02495,Special Class Lab
+BRB,02325,Office
+BRB,02230,Public Corridor
+BRB,02016,Public Corridor
+BRB,02018,Public Corridor
+BRB,01025,Classroom
+BRB,02025,Office
+BRB,02325A,Office
+BRB,01035,Office Service
+BRB,01045,Office
+BRB,01050,Office Service
+BRB,01100,Office
+BRB,01115,Office
+BRB,01120,Office
+BRB,01125,Office Service
+BRB,01135,Office
+BRB,01145,Conference Room
+BRB,01150,Office
+BRB,02020,Office
+BRB,02030,Office
+BRB,02055,Office
+BRB,02095,Office
+BRB,02105,Office
+BRB,02125,Office
+BRB,02130,Office Service
+BRB,02215,Office
+BRB,02220,Office
+BRB,02225,Office
+BRB,02245,Office
+BRB,02280,Office
+BRB,02300,Office
+BRB,02310,Office
+BRB,02320,Office
+BRB,02330,Office
+BRB,02340,Office
+BRB,02345,Office
+BRB,02350,Office
+BRB,02355,Office
+BRB,02372,Office Service
+BRB,02415,Special Class Lab
+BRB,02430,Special Class Lab
+BRB,02510,Office
+BRB,02190,Office
+BRB,02195,Office
+BRB,02170,Office
+BRB,02175,Office
+BRB,02205,Office
+BRB,02015A,Office
+BRB,02015B,Office
+BRB,02040,Office Service
+BRB,02405,Class Laboratory
+BRB,02410,Class Laboratory
+BRB,02435,Class Laboratory
+BRB,02440,Class Laboratory
+BRB,2040.01,Office
+BRB,2040.02,Office
+BRB,2040.03,Office
+CAS,00100,Lobby
+CAS,00112,Lobby
+CAS,00119,Public Corridor
+CAS,00124,Public Corridor
+CAS,00129,Public Corridor
+CAS,00133,Office
+CAS,00139,Public Corridor
+CAS,00143,Public Corridor
+CAS,00149,Stairway
+CAS,00150,Lobby
+CAS,00155,Womens Public Restroom
+CAS,00156,Mens Public Restroom
+CAS,00159,Stairway
+CAS,00163,Public Corridor
+CAS,00200,Public Corridor
+CAS,00201,Office
+CAS,00202,Individual Study Lab
+CAS,00203,Public Corridor
+CAS,00204,Office
+CAS,00204A,Office
+CAS,00204B,Office
+CAS,00204C,Office
+CAS,00205,Office Service
+CAS,00205A,Office
+CAS,00205B,Office
+CAS,00205C,Office
+CAS,00205D,Office Service
+CAS,00206,Public Corridor
+CAS,00207,Office Service
+CAS,00207A,Office
+CAS,00207B,Office
+CAS,00207C,Office
+CAS,00208,Classroom
+CAS,00212,Classroom
+CAS,00214,Public Corridor
+CAS,00215,Office
+CAS,00215A,Office
+CAS,00215B,Office
+CAS,00216,Conference Room
+CAS,00217,Public Corridor
+CAS,00219,Office
+CAS,00220,Office
+CAS,00221,Office
+CAS,00222,Public Corridor
+CAS,00223,Office
+CAS,00224,Office
+CAS,00225,Office
+CAS,00226,Office
+CAS,00227,Office
+CAS,00228,Office
+CAS,00229,Office
+CAS,00230,Circulation Area
+CAS,00231,Office
+CAS,00232,Office
+CAS,00233,Office
+CAS,00234,Public Corridor
+CAS,00235,Office
+CAS,00236,Office
+CAS,00237,Office
+CAS,00237A,Office Service
+CAS,00238,Office
+CAS,00239,Office
+CAS,00240,Office
+CAS,00241,Office
+CAS,00242,Office
+CAS,00243,Office
+CAS,00244,Public Corridor
+CAS,00245,Office
+CAS,00246,Office
+CAS,00247,Office
+CAS,00248,Office
+CAS,00250,Office
+CAS,00251,Office Service
+CAS,00251A,Office Service
+CAS,00252,Office Service
+CAS,00254,Office
+CAS,00255,Stairway
+CAS,00256,Lounge
+CAS,00256A,Office
+CAS,00256B,Office
+CAS,00256C,Office Service
+CAS,00257,Classroom
+CAS,00261,Womens Public Restroom
+CAS,00262,Mens Public Restroom
+CAS,00263,Office Service
+CAS,00264,Merchandising
+CAS,00265,Stairway
+CAS,00266,Office
+CAS,00267,Office
+CAS,00268,Office
+CAS,00269,Office
+CAS,00270,Office
+CAS,00102,Office
+CAS,00102A,Office Service
+CAS,00102B,Office
+CAS,00102C,Office
+CAS,00102D,Office
+CAS,00102E,Office
+CAS,00109,Office
+CAS,00109A,Office
+CAS,00109B,Office
+CAS,00113,Office
+CAS,00114,Office
+CAS,00114A,Office
+CAS,00114B,Office
+CAS,00115,Office
+CAS,00116,Office
+CAS,00117,Office
+CAS,00118,Office
+CAS,00120,Office
+CAS,00121,Office
+CAS,00122,Office
+CAS,00123,Office
+CAS,00124A,Office
+CAS,00125,Office
+CAS,00126,Office
+CAS,00127,Office
+CAS,00128,Office
+CAS,00130,Office
+CAS,00131,Office
+CAS,00131A,Office
+CAS,00132,Office
+CAS,00133A,Office
+CAS,00134,Office
+CAS,00135,Office
+CAS,00135A,Office
+CAS,00136,Office
+CAS,00137,Office
+CAS,00138,Office
+CAS,00139A,Office Service
+CAS,00140,Office
+CAS,00141,Office
+CAS,00142,Office
+CAS,00143A,Office
+CAS,00144,Office
+CAS,00145,Office Service
+CAS,00146,Office
+CAS,00152,Office
+CAS,00152A,Office
+CAS,00152B,Office
+CAS,00153,Office
+CAS,00154,Office
+CAS,00154A,Office
+CAS,00154B,Office
+CAS,00162,Office
+CAS,00147,Food Facility
+CAS,00148,Food Facility Service
+CAS,00104,Classroom
+CAS,00106,Special Class Lab
+CAS,00158,Classroom
+CAS,00210,Classroom
+CAS,00258,Classroom
+COB,00103,Classroom
+COB,00108,Womens Public Restroom
+COB,00110,Mens Public Restroom
+COB,00111,Classroom
+COB,00112,Classroom
+COB,00115,Lounge
+COB,00117,Unisex Restroom
+COB,00119,Food Facility
+COB,00123,Office
+COB,00126,Lounge Service
+COB,00128,Central Computer/Telecomm
+COB,00142,Mens Public Restroom
+COB,00144,Womens Public Restroom
+COB,00150,Special Class Lab
+COB,00152,Special Class Lab
+COB,00154,Special Class Lab
+COB,00156,Special Class Lab
+COB,00158,Special Class Lab
+COB,00160,Special Class Lab
+COB,00162,Special Class Lab
+COB,00166,Womens Public Restroom
+COB,00168,Mens Public Restroom
+COB,00180,Assembly
+COB,00203,Classroom
+COB,00206,Reading Study Room
+COB,00208,Womens Public Restroom
+COB,00210,Mens Public Restroom
+COB,00212,Classroom
+COB,00214,Classroom
+COB,00215,Office
+COB,00221,Lounge
+COB,00223,Office
+COB,00225,Office
+COB,00226,Central Computer/Telecomm
+COB,00229,Special Class Lab
+COB,00242,Mens Public Restroom
+COB,00244,Womens Public Restroom
+COB,00252,Reading Study Room
+COB,00253,Reading Study Room
+COB,00256,Class Laboratory Srv
+COB,00257,Reading Study Room
+COB,00258,Special Class Lab
+COB,00259,Special Class Lab
+COB,00260,Reading Study Room
+COB,00261,Reading Study Room
+COB,00303,Conference Room Service
+COB,00306,Reading Study Room
+COB,00307,Conference Room
+COB,00308,Unisex Restroom
+COB,00309,Lounge
+COB,00310,Unisex Restroom
+COB,00311,Lounge
+COB,00312,Office
+COB,00313,Lounge
+COB,00315,Office
+COB,00321,Conference Room
+COB,00323,Lounge
+COB,00325,Reading Study Room
+COB,00326,Central Computer/Telecomm
+COB,00327,Special Class Lab
+COB,00342,Mens Public Restroom
+COB,00344,Womens Public Restroom
+COB,00350,Office
+COB,00390,Circulation Area
+COB,101.01,Central Computer/Telecomm
+COB,103.01,Reading Study Room
+COB,103.02,Reading Study Room
+COB,103.03,Classroom Service
+COB,103.04,Classroom Service
+COB,111.01,Reading Study Room
+COB,111.02,Reading Study Room
+COB,111.03,Classroom Service
+COB,111.04,Classroom Service
+COB,119.01,Food Facility Service
+COB,119.14,Circulation Area
+COB,123.01,Office
+COB,123.02,Office
+COB,123.03,Office
+COB,123.04,Office
+COB,123.05,Office
+COB,123.06,Conference Room
+COB,123.07,Office Service
+COB,152.01,Special Class Lab
+COB,152.02,Special Class Lab Service
+COB,152.03,Special Class Lab Service
+COB,154.01,Special Class Lab Service
+COB,180.01,Assembly (Auditorium) Srv
+COB,199.01,Circulation Area
+COB,199.02,Stairway
+COB,199.03,Circulation Area
+COB,199.05,Stairway
+COB,199.08,Circulation Area
+COB,199.09,Circulation Area
+COB,199.10,Lounge
+COB,199.11,Circulation Area
+COB,199.15,Circulation Area
+COB,199.16,Circulation Area
+COB,199.17,Circulation Area
+COB,199.18,Stairway
+COB,199.19,Circulation Area
+COB,199.20,Circulation Area
+COB,199.21,Circulation Area
+COB,201.01,Central Computer/Telecomm
+COB,203.01,Reading Study Room
+COB,203.02,Classroom Service
+COB,207.01,Lounge
+COB,211.01,Reading Study Room
+COB,215.01,Office
+COB,215.02,Office
+COB,215.03,Office
+COB,223.01,Office
+COB,223.02,Office
+COB,223.03,Office
+COB,223.04,Office Service
+COB,225.01,Conference Room
+COB,225.02,Office
+COB,225.03,Office
+COB,225.04,Office
+COB,225.05,Office
+COB,225.06,Office Service
+COB,225.07,Office
+COB,229.10,Circulation Area
+COB,259.01,Class Laboratory Srv
+COB,299.02,Stairway
+COB,299.03,Circulation Area
+COB,299.05,Stairway
+COB,299.06,Circulation Area
+COB,299.07,Circulation Area
+COB,299.14,Circulation Area
+COB,299.18,Stairway
+COB,301.01,Central Computer/Telecomm
+COB,307.01,Conference Room Service
+COB,307.03,Conference Room Service
+COB,312.01,Office
+COB,312.02,Office
+COB,312.03,Office Service
+COB,312.04,Conference Room
+COB,312.05,Office
+COB,312.07,Office
+COB,312.08,Office
+COB,312.10,Office Service
+COB,312.11,Office
+COB,315.01,Office
+COB,315.03,Office
+COB,315.04,Office Service
+COB,315.05,Office
+COB,315.06,Office
+COB,315.07,Office
+COB,315.08,Office
+COB,315.09,Office
+COB,315.10,Office
+COB,315.11,Office
+COB,315.12,Office
+COB,315.13,Office
+COB,315.14,Office
+COB,315.15,Office Service
+COB,315.16,Office
+COB,315.17,Office
+COB,315.18,Office
+COB,315.19,Office
+COB,315.21,Office
+COB,319.09,Office
+COB,350.01,Office
+COB,350.03,Office
+COB,350.04,Office
+COB,350.05,Office
+COB,350.06,Office
+COB,350.08,Office
+COB,350.09,Office
+COB,350.10,Office
+COB,350.12,Office
+COB,350.13,Office
+COB,350.14,Office
+COB,350.15,Office
+COB,350.16,Office
+COB,350.17,Office
+COB,350.19,Office
+COB,350.21,Office
+COB,350.23,Office
+COB,350.24,Office
+COB,350.25,Office
+COB,350.26,Office
+COB,350.27,Office
+COB,350.28,Office
+COB,350.29,Office
+COB,350.30,Office
+COB,350.31,Office
+COB,350.32,Office
+COB,350.33,Office
+COB,350.34,Office
+COB,350.35,Office
+COB,350.36,Office
+COB,350.39,Office
+COB,350.43,Office
+COB,350.44,Office
+COB,350.45,Office
+COB,350.46,Office
+COB,350.47,Office
+COB,350.48,Office
+COB,350.49,Office
+COB,350.50,Office
+COB,350.51,Office
+COB,350.53,Office
+COB,350.55,Conference Room
+COB,399.01,Circulation Area
+COB,399.02,Stairway
+COB,399.03,Circulation Area
+COB,399.05,Stairway
+COB,399.08,Circulation Area
+COB,399.10,Circulation Area
+COB,399.11,Circulation Area
+COB,399.14,Circulation Area
+COB,399.16,Circulation Area
+COB,399.18,Stairway
+COB,00207,Special Class Lab
+COB,00211,Special Class Lab
+COB,00251,Special Class Lab
+COB,00255,Special Class Lab
+COB,207.02,Special Class Lab Service
+COB,207.03,Special Class Lab Service
+COB,211.02,Special Class Lab Service
+COB,00360,Conference Room
+COB,350.02,Office Service
+COB,312.12,Office Service
+COB,00227,Classroom
+FAC,01009,Classroom
+FAC,01120,Office
+FAC,01122,Office
+FAC,01122A,Office Service
+FAC,01141,Office
+FAC,01143,Office
+FAC,01147,Office
+FAC,02024,Office Service
+FAC,02100,Office
+FAC,01021,Special Class Lab
+FAC,02103,Office
+FAC,01000,Lobby
+FAC,01001,Mens Public Restroom
+FAC,01002,Womens Public Restroom
+FAC,01003,Assembly
+FAC,01005A,Exhibition Service
+FAC,01009B,Classroom Service
+FAC,01100U,Assembly
+FAC,01109,Assembly (Auditorium) Srv
+FAC,01110,Mens Public Restroom
+FAC,01111,Womens Public Restroom
+FAC,01115,Merchandising
+FAC,01116,Lobby
+FAC,01117,Lobby
+FAC,01119,Lobby
+FAC,01126,Womens Public Restroom
+FAC,01128,Mens Public Restroom
+FAC,01130,Lobby
+FAC,01132A,Merchandising
+FAC,01133,Lobby
+FAC,01134,Stairway
+FAC,01135,Lobby
+FAC,01136,Mens Public Restroom
+FAC,01137,Womens Public Restroom
+FAC,01140,Assembly (Auditorium) Srv
+FAC,01142,Loading Dock
+FAC,02000,Lobby
+FAC,02002,Mens Public Restroom
+FAC,02003,Womens Public Restroom
+FAC,02104,Lobby
+FAC,02105,Womens Public Restroom
+FAC,02106,Mens Public Restroom
+FAC,02107,Lobby
+FAC,02108,Womens Public Restroom
+FAC,02109,Mens Public Restroom
+FAC,0STU2,Individual Study Lab
+FAC,0STU3,Individual Study Lab
+FAC,0STU4,Individual Study Lab
+FAC,0STU5,Individual Study Lab
+FAC,0STU6,Individual Study Lab
+FAC,1100B1,Assembly (Auditorium) Srv
+FAC,1100B2,Assembly (Auditorium) Srv
+FAC,01025,Assembly (Auditorium) Srv
+FAC,01025A,Assembly (Auditorium) Srv
+FAC,01027A,Assembly (Auditorium) Srv
+FAC,01029,Assembly (Auditorium) Srv
+FAC,01029A,Assembly (Auditorium) Srv
+FAC,01031,Assembly (Auditorium) Srv
+FAC,01031A,Assembly (Auditorium) Srv
+FAC,01100A,Assembly (Auditorium) Srv
+FAC,01100B,Assembly (Auditorium) Srv
+FAC,01118,Assembly (Auditorium) Srv
+FAC,01124,Assembly (Auditorium) Srv
+FAC,01129,Assembly (Auditorium) Srv
+FAC,01131,Assembly (Auditorium) Srv
+FAC,02028A,Assembly (Auditorium) Srv
+FAC,02023,Office
+FAC,01005,Exhibition
+FAC,01016,Assembly (Auditorium) Srv
+FAC,01027,Assembly (Auditorium) Srv
+FAC,01036,Assembly (Auditorium) Srv
+FAC,01037,Assembly (Auditorium) Srv
+FAC,01042A,Office
+FAC,02005,Office
+FAC,02027,Special Class Lab Service
+FAC,0STU7,Individual Study Lab
+FAC,01123,Merchandising
+FAC,01127,Merchandising Service
+FAC,02006,Classroom
+FAC,02101,Conference Room
+FAC,01149,Shop
+FAC,02102,Office
+FAC,01019,Special Class Lab
+FAC,01009A,Assembly (Auditorium) Srv
+FAC,01017,Office
+FAC,01018,Individual Study Lab
+FAC,01100,Assembly
+FAC,01101,Assembly
+FAC,02014,Public Corridor
+FAC,01108,Public Corridor
+FAC,02029,Central Computer/Telecomm
+FAC,01103,Special Class Lab Service
+FAC,01105,Unisex Restroom
+FAC,01200,Lobby
+FAC,01201,Lobby
+FAC,01202,Lobby
+FAC,01203,Office Service
+FAC,01205,Public Corridor
+FAC,01210,Public Corridor
+FAC,01212,Office
+FAC,01213,Office
+FAC,01214,Office
+FAC,01215,Office
+FAC,01216,Lobby
+FAC,01230,Public Corridor
+FAC,02007,Special Class Lab
+FAC,02008,Special Class Lab Service
+FAC,02210,Public Corridor
+FAC,02211,Office
+FAC,02214,Conference Room
+FAC,02216,Office
+FAC,02217,Office
+FAC,02218,Office
+FAC,02219,Office
+FAC,02220,Office
+FAC,02221,Lobby
+FAC,02223,Lounge
+FAC,02230,Public Corridor
+FAC,01123A,Merchandising
+FAC,01138,Assembly (Auditorium) Srv
+FAC,01211,Office
+FAC,01217,Public Corridor
+FAC,01218,Public Corridor
+FAC,02001,Office Service
+FAC,02009,Office
+FAC,02010,Office Service
+FAC,02011,Office
+FAC,02012,Office
+FAC,02013,Office
+FAC,02019,Office
+FAC,02020,Office
+FAC,02021,Office
+FAC,02022,Office
+FAC,02212,Office
+FAC,02213,Office
+FAC,02215,Office Service
+FAC,01013,Special Class Lab Service
+FAC,01014,Assembly (Auditorium) Srv
+FAC,01042B,Office Service
+FAC,01043,Exhibition Service
+FAC,02004,Office Service
+FAC,02015,Stairway
+FAC,02018,Special Class Lab Service
+FAC,0STUA,Individual Study Lab
+FAC,0STUB,Individual Study Lab
+FAC,0STUC,Individual Study Lab
+FAC,02132A,Assembly (Auditorium) Srv
+FAC,01040,Assembly (Auditorium) Srv
+FAC,01221,Class Laboratory
+FAC,01222,Class Laboratory
+FAC,02110,Merchandising
+HPC,03095,Office
+HPC,03105,Office
+HPC,03110,Office
+HPC,01020,Athletic or Physical Educ Srv
+HPC,01030,Athletic or Physical Educ Srv
+HPC,01035,Athletic or Physical Educ Srv
+HPC,01045A,Athletic or Physical Educ Srv
+HPC,01047,Athletic or Physical Educ Srv
+HPC,01055,Athletic or Physical Educ Srv
+HPC,01060,Athletic or Physical Educ Srv
+HPC,01065,Athletic or Physical Educ Srv
+HPC,01080,Athletic or Physical Educ Srv
+HPC,01085,Athletic or Physical Educ Srv
+HPC,01090,Athletic or Physical Educ Srv
+HPC,01095,Athletic or Physical Educ Srv
+HPC,01100,Athletic or Physical Educ Srv
+HPC,01105,Athletic or Physical Educ Srv
+HPC,01126,Recreation Service
+HPC,01131,Recreation Service
+HPC,01145,Recreation Service
+HPC,01150,Recreation Service
+HPC,01155,Recreation Service
+HPC,01160,Recreation Service
+HPC,01180,Recreation Service
+HPC,01185,Recreation Service
+HPC,01190,Recreation Service
+HPC,01195,Recreation Service
+HPC,01200,Athletic or Physical Educ Srv
+HPC,01201,Athletic or Physical Educ Srv
+HPC,01205,Recreation Service
+HPC,01220,Athletic or Physical Educ Srv
+HPC,01225,Athletic or Physical Educ Srv
+HPC,01230,Athletic or Physical Educ Srv
+HPC,01265,Lobby
+HPC,01270C,Clinic Service
+HPC,02000,Lobby
+HPC,02010,Athletic or Physical Educ Srv
+HPC,02040,Womens Public Restroom
+HPC,02045,Janitor Room
+HPC,02050,Public Corridor
+HPC,02055,Mens Public Restroom
+HPC,02060,Athletic or Physical Educ Srv
+HPC,02065,Lobby
+HPC,02070,Merchandising
+HPC,02075,Merchandising
+HPC,02080,Merchandising
+HPC,02086,Athletic or Physical Educ Srv
+HPC,02105,Lobby
+HPC,02115,Recreation Service
+HPC,02135,Recreation Service
+HPC,02140,Recreation Service
+HPC,02210,Womens Public Restroom
+HPC,02225,Mens Public Restroom
+HPC,02260,Classroom Service
+HPC,03015,Mens Public Restroom
+HPC,03020,Womens Public Restroom
+HPC,03140,Athletic or Physical Educ Srv
+HPC,0SEA1,Stairway
+HPC,0SEA2,Stairway
+HPC,0SEA3,Stairway
+HPC,0SNO1,Stairway
+HPC,0SNO2,Stairway
+HPC,0SNO3,Stairway
+HPC,0SNW1,Stairway
+HPC,0SNW2,Stairway
+HPC,0SNW3,Stairway
+HPC,0SSE1,Stairway
+HPC,0SSE2,Stairway
+HPC,0SSE3,Stairway
+HPC,0SSO1,Stairway
+HPC,0SSO2,Stairway
+HPC,0SSO3,Stairway
+HPC,0SSW1,Stairway
+HPC,0SSW2,Stairway
+HPC,0SWE1,Stairway
+HPC,0SWE2,Stairway
+HPC,COR1A,Public Corridor
+HPC,COR1B,Public Corridor
+HPC,COR1C,Public Corridor
+HPC,COR2A,Public Corridor
+HPC,COR2B,Public Corridor
+HPC,COR2C,Public Corridor
+HPC,COR3A,Public Corridor
+HPC,COR3B,Public Corridor
+HPC,COR3C,Public Corridor
+HPC,03050,Special Class Lab
+HPC,03045,Office Service
+HPC,01045,Athletic or Physical Educ Srv
+HPC,01045B,Athletic or Physical Educ Srv
+HPC,01120,Office
+HPC,01121,Office Service
+HPC,01125,Office
+HPC,01130,Office
+HPC,01135,Office
+HPC,01270A,Clinic Service
+HPC,01270B,Clinic Service
+HPC,01270E,Office
+HPC,02100,Athletic/Physical Educ
+HPC,02120,Recreation
+HPC,02125,Recreation
+HPC,02166,Office
+HPC,02186,Office
+HPC,02190,Office Service
+HPC,02235,Special Class Lab
+HPC,02245,Office
+HPC,02255,Classroom
+HPC,03010,Classroom
+HPC,03040,Office
+HPC,03051,Office
+HPC,03065,Office
+HPC,03066,Office
+HPC,03070,Office Service
+HPC,03075,Office
+HPC,03090,Office
+HPC,03100,Office
+HPC,03035,Special Class Lab
+HPC,01270D,Non-Class Lab
+HPC,02200,Public Corridor
+HPC,02200A,Office
+HPC,02200B,Office
+HPC,03080,Office
+HPC,02185,Class Laboratory
+HPC,03055,Classroom
+HPC,01015,Athletic or Physical Educ Srv
+HPC,02110,Recreation
+HPC,03115,Recreation
+HPC,03120,Recreation
+HPC,01010,Athletic/Physical Educ
+HPC,01271,Clinic
+HPC,01272,Clinic
+HPC,01040,Athletic or Physical Educ Srv
+HPC,01046,Office
+HPC,01215,Office
+HPC,01260,Non-Class Lab
+HPC,02165,Class Laboratory
+HPC,02170,Class Laboratory Srv
+HPC,02175,Class Laboratory Srv
+HPC,02180,Non-Class Lab
+HPC,02195,Non-Class Lab
+HPC,02260A,Office Service
+HPC,02265,Special Class Lab
+HPC,03052,Office Service
+HPC,03085,Office
+HPC,01270,Clinic
+HPR,00105,Office
+HPR,00149,Office Service
+HPR,00223,Office
+HPR,00224,Office
+HPR,00116,Public Corridor
+HPR,00135A,Public Corridor
+HPR,00200A,Stairway
+HPR,00211,Public Corridor
+HPR,00216,Public Corridor
+HPR,00217,Public Corridor
+HPR,00222,Public Corridor
+HPR,00229,Public Corridor
+HPR,00230,Mens Public Restroom
+HPR,00232,Womens Public Restroom
+HPR,00245,Public Corridor
+HPR,00249,Public Corridor
+HPR,00250,Public Corridor
+HPR,00270,Public Corridor
+HPR,00273,Public Corridor
+HPR,00274D,Public Corridor
+HPR,00150,Non-Class Lab
+HPR,00274B,Special Class Lab Service
+HPR,00274C,Special Class Lab Service
+HPR,00156,Non-Class Lab
+HPR,00100A,Stairway
+HPR,00100B,Stairway
+HPR,00104,Office
+HPR,00106,Public Corridor
+HPR,00108,Office
+HPR,00109,Office
+HPR,00110,Office
+HPR,00111,Public Corridor
+HPR,00117,Office
+HPR,00118,Office
+HPR,00124,Womens Public Restroom
+HPR,00133,Public Corridor
+HPR,00137,Lobby
+HPR,00140,Non-Class Lab
+HPR,00141,Non-Class Lab
+HPR,00143,Public Corridor
+HPR,00145,Non-Class Lab
+HPR,00147,Public Corridor
+HPR,00152,Public Corridor
+HPR,00153,Non-Class Lab
+HPR,00154,Non-Class Lab
+HPR,00155,Non-Class Lab
+HPR,00200,Stairway
+HPR,00204,Office
+HPR,00206,Public Corridor
+HPR,00208,Office
+HPR,00209,Office
+HPR,00210,Office
+HPR,00212,Office
+HPR,00213,Office
+HPR,00214,Office
+HPR,00253,Classroom
+HPR,00274,Special Class Lab
+HPR,00274A,Office
+HPR,00138,Non-Class Lab
+HPR,00138A,Non-Class Lab
+HPR,00139,Non-Class Lab
+HPR,00119,Reading Study Room
+HPR,00142,Non-Class Lab
+HPR,00146,Non-Class Lab
+HPR,00148,Non-Class Lab
+HPR,00157,Non-Class Lab
+HPR,00121,Mens Public Restroom
+HPR,00247,Classroom
+HPR,00262,Classroom
+HPR,00100,Stairway
+HPR,00103,Office
+HPR,00127,Office
+HPR,00128,Office Service
+HPR,00129,Office
+HPR,00151,Non-Class Lab Srv
+HPR,00251,Classroom
+HPR,00252,Classroom
+HPR,00248,Classroom
+HPR,00101,Office Service
+HPR,00102,Conference Room
+HPR,00107,Office
+HPR,00112,Office
+HPR,00113,Office
+HPR,00114,Office
+HPR,00115,Office
+HPR,00126,Office
+HPR,00126A,Office
+HPR,00130,Office Service
+HPR,00131,Office Service
+HPR,00131A,Office
+HPR,00132,Conference Room
+HPR,00201,Office
+HPR,00202,Office
+HPR,00203,Office
+HPR,00205,Office
+HPR,00207,Office
+HPR,00218,Office Service
+HPR,00219,Office
+HPR,00220,Office
+HPR,00221,Office
+HPR,00225,Office Service
+HPR,00226,Office
+HPR,00227,Office
+HPR,00235,Special Class Lab
+HPR,00236,Office
+HPR,00237,Office
+HPR,00238,Office
+HPR,00239,Office
+HPR,00240,Office
+HPR,00241,Office
+HPR,00242,Office
+HPR,00243,Office
+HPR,00244,Office
+HPR,00246,Office
+HPR,00246A,Office
+HPR,00246B,Office
+HPR,00246C,Office
+HPR,00255,Special Class Lab
+HPR,00256,Individual Study Lab
+HPR,00256A,Non-Class Lab
+HPR,00256B,Non-Class Lab
+HPR,00256C,Non-Class Lab
+HPR,00257,Individual Study Lab
+HPR,00258,Individual Study Lab
+HPR,00259,Individual Study Lab
+HPR,00260,Individual Study Lab
+HPR,00261,Non-Class Lab
+HPR,00261A,Non-Class Lab Srv
+HPR,00261B,Non-Class Lab Srv
+HPR,00263,Office
+HPR,00263A,Office
+HPR,00264,Office
+HPR,00265,Office
+HPR,00266,Office
+HPR,00267,Office
+HPR,00268,Office
+HPR,00269,Office
+HPR,00271,Office Service
+HPR,00272,Office
+HPR,00275,Class Laboratory
+HPR,00277,Conference Room
+ICB,00101,Mens Public Restroom
+ICB,00102,Womens Public Restroom
+ICB,00105,Office Service
+ICB,00100,Demonstration
+ICB,00106,Office Service
+LIB,00109,Office
+LIB,00119,Office
+LIB,00127C,Office
+LIB,00127D,Office
+LIB,00127F,Office
+LIB,00128,Office
+LIB,00206A,Office Service
+LIB,00206B,Office Service
+LIB,00206C,Office Service
+LIB,00206D,Office
+LIB,00208,Office Service
+LIB,00210B,Office
+LIB,00214,Office
+LIB,00216,Office
+LIB,00127H,Office
+LIB,00207A,Office Service
+LIB,00126A,Media Production
+LIB,00100,Lobby
+LIB,00101,Public Corridor
+LIB,00102,Central Service
+LIB,00103,Central Service
+LIB,00104,Central Service Support
+LIB,00105,Central Storage Service
+LIB,00106,Processing Room
+LIB,00108,Public Corridor
+LIB,00112,Stack
+LIB,00116,Public Corridor
+LIB,00117,Public Corridor
+LIB,00120,Central Computer/Telecomm
+LIB,00123,Womens Public Restroom
+LIB,00124,Mens Public Restroom
+LIB,00125,Public Corridor
+LIB,00125A,Public Corridor
+LIB,00126,Public Corridor
+LIB,00133,Lobby
+LIB,00134,Stairway
+LIB,00135,Stairway
+LIB,00136,Stairway
+LIB,00200,Lobby
+LIB,00201,Public Corridor
+LIB,00204,Womens Public Restroom
+LIB,00205,Mens Public Restroom
+LIB,00207,Processing Room
+LIB,00209,Processing Room
+LIB,00211,Open Stack Study Room
+LIB,00218,Open Stack Study Room
+LIB,00223,Food Facility Service
+LIB,00225,Lobby
+LIB,00226,Stairway
+LIB,00227,Stairway
+LIB,00228,Stairway
+LIB,00300,Lobby
+LIB,00311,Mens Public Restroom
+LIB,00315,Womens Public Restroom
+LIB,00316,Stack
+LIB,00326,Lobby
+LIB,00327,Stairway
+LIB,00328,Stairway
+LIB,00329,Stairway
+LIB,00406,Stairway
+LIB,00407,Lobby
+LIB,00408,Womens Public Restroom
+LIB,00410,Lobby
+LIB,00411,Lobby
+LIB,00412,Mens Public Restroom
+LIB,00413,Stairway
+LIB,00414,Lobby
+LIB,00415,Stairway
+LIB,00417,Open Stack Study Room
+LIB,00420,Public Corridor
+LIB,00429,Lobby
+LIB,00215,Office Service
+LIB,00220,Reading Study Room
+LIB,00302,Reading Study Room
+LIB,00303,Reading Study Room
+LIB,00304,Reading Study Room
+LIB,00305,Reading Study Room
+LIB,00306,Reading Study Room
+LIB,00307,Reading Study Room
+LIB,00308,Reading Study Room
+LIB,00312,Reading Study Room
+LIB,00313,Reading Study Room
+LIB,00314,Reading Study Room
+LIB,00317,Reading Study Room
+LIB,00318,Reading Study Room
+LIB,00319,Reading Study Room
+LIB,00321,Reading Study Room
+LIB,00322,Reading Study Room
+LIB,00323,Reading Study Room
+LIB,00324,Reading Study Room
+LIB,00325,Reading Study Room
+LIB,00107,Open Stack Study Room
+LIB,00213,Reading Study Room
+LIB,00419,Reading Study Room
+LIB,00114,Stack
+LIB,00115,Media Production
+LIB,00404,Study Service
+LIB,00118,Media Production Service
+LIB,00120A,Media Production
+LIB,00127,Office
+LIB,00206,Office
+LIB,00210A,Office
+LIB,00210C,Media Production
+LIB,00217,Office Service
+LIB,00221,Office
+LIB,00301,Reading Study Room
+LIB,00401,Reading Study Room
+LIB,00401A,Study Service
+LIB,00403,Study Service
+LIB,00405,Study Service
+LIB,00421,Office Service
+LIB,00422,Reading Study Room
+LIB,00423A,Office
+LIB,00424,Office
+LIB,00425,Office
+LIB,00425A,Office
+LIB,00426,Office
+LIB,00428,Office Service
+LIB,00219,Open Stack Study Room
+LIB,00427,Office
+LIB,00127A,Conference Room
+LIB,00127G,Office
+LIB,00127I,Office
+LIB,00127J,Office
+LIB,00418,Reading Study Room
+LIB,00423,Office
+LIB,0126BA,Office
+LIB,00121,Office
+LIB,00127B,Office Service
+LIB,00127E,Office
+LIB,00202,Reading Study Room
+LIB,00203,Office Service
+LIB,00210,Office Service
+ORH,00100A,Office
+ORH,00100B,Office Service
+ORH,00100C,Office Service
+ORH,00103,Lounge
+ORH,00117,Office
+ORH,00118,Office
+ORH,00101,Lobby
+ORH,00102,Public Corridor
+ORH,00104,Lounge Service
+ORH,00105,Lounge Service
+ORH,00106,Womens Public Restroom
+ORH,00107,Mens Public Restroom
+ORH,00108,Lobby
+ORH,00109,Stairway
+ORH,00110,Lobby
+ORH,00111,Reading Study Room
+ORH,00113,Lobby
+ORH,00114,Merchandising
+ORH,00115,Public Corridor
+ORH,00116,Sleep/Study Service
+ORH,00119,Sleep/Study Service
+ORH,02100,Stairway
+ORH,02100A,Public Corridor
+ORH,02124,Central Storage
+ORH,02126,Stairway
+ORH,02126A,Public Corridor
+ORH,02143,Stairway
+ORH,02143A,Public Corridor
+ORH,02144,Lobby
+ORH,03100,Stairway
+ORH,03100A,Public Corridor
+ORH,03124,Central Storage
+ORH,03126,Stairway
+ORH,03126A,Public Corridor
+ORH,03143,Stairway
+ORH,03143A,Public Corridor
+ORH,04100,Stairway
+ORH,04100A,Public Corridor
+ORH,04124,Central Storage
+ORH,04126,Stairway
+ORH,04126A,Public Corridor
+ORH,04143,Stairway
+ORH,04143A,Public Corridor
+ORH,05100,Stairway
+ORH,05100A,Public Corridor
+ORH,05124,Central Storage
+ORH,05126,Stairway
+ORH,05126A,Public Corridor
+ORH,05143,Stairway
+ORH,05143A,Public Corridor
+PHE,00103,Office
+PHE,00210B,Office
+PHE,00210C,Office
+PHE,00210G,Office
+PHE,00210I,Office
+PHE,00213B,Office
+PHE,00213C,Office
+PHE,00213D,Office
+PHE,00213E,Office
+PHE,00217,Office
+PHE,00218,Office
+PHE,00222,Office Service
+PHE,00100,Athletic or Physical Educ Srv
+PHE,00101,Athletic or Physical Educ Srv
+PHE,00102,Athletic or Physical Educ Srv
+PHE,00107,Womens Public Restroom
+PHE,00108,Womens Public Restroom
+PHE,00109,Athletic or Physical Educ Srv
+PHE,00109A,Athletic or Physical Educ Srv
+PHE,00111,Public Corridor
+PHE,00113,Stairway
+PHE,00114,Recreation Service
+PHE,00123,Public Corridor
+PHE,00125,Stairway
+PHE,00127,Public Corridor
+PHE,00129,Mens Public Restroom
+PHE,00130,Mens Public Restroom
+PHE,00132,Athletic or Physical Educ Srv
+PHE,00201,Public Corridor
+PHE,00202,Womens Public Restroom
+PHE,00203,Public Corridor
+PHE,00204,Mens Public Restroom
+PHE,00205,Public Corridor
+PHE,00215,Public Corridor
+PHE,00219,Stairway
+PHE,00221,Public Corridor
+PHE,00229,Stairway
+PHE,00119B,Office Service
+PHE,00119C,Office Service
+PHE,00210A,Office
+PHE,00213,Office Service
+PHE,00214,Office Service
+PHE,00220,Reading Study Room
+PHE,00104,Athletic or Physical Educ Srv
+PHE,00105,Athletic or Physical Educ Srv
+PHE,00110,Reading Study Room
+PHE,00121,Office
+PHE,00122,Recreation
+PHE,00210,Office Service
+PHE,00212,Athletic or Physical Educ Srv
+PHE,00106,Office
+PHE,00136,Athletic or Physical Educ Srv
+PHE,00120,Office
+PHE,00210D,Office
+PHE,00210E,Office
+PHE,00210H,Office
+PHE,00211,Athletic or Physical Educ Srv
+PHE,00213A,Office
+PHE,00124A,Office
+PHE,00112,Office
+PHE,00124,Office
+PHE,00134,Athletic or Physical Educ Srv
+PHE,00135,Athletic or Physical Educ Srv
+PHE,00137,Athletic or Physical Educ Srv
+PHE,00138,Athletic or Physical Educ Srv
+PHE,00139,Athletic or Physical Educ Srv
+PHE,00200,Conference Room
+PHE,00210F,Office
+PHE,00226,Office
+PHE,00228,Office
+PHE,00216,Conference Room
+PHE,00115,Recreation Service
+PHE,00116,Recreation Service
+PHE,00117,Recreation Service
+PHE,00118,Office Service
+PHE,00119,Office Service
+PHE,00119A,Office Service
+PHE,00227,Office
+PHE,00131,Athletic or Physical Educ Srv
+RBN,02010,Office
+RBN,02045,Office
+RBN,04008,Office
+RBN,01007,Special Class Lab
+RBN,01020,Special Class Lab
+RBN,01023,Office
+RBN,01025,Special Class Lab
+RBN,01035,Special Class Lab
+RBN,02005,Office
+RBN,02006,Office Service
+RBN,02009,Conference Room
+RBN,02017,Office Service
+RBN,02027,Non-Class Lab
+RBN,02041,Office
+RBN,02043,Office
+RBN,02044,Office Service
+RBN,04002,Office
+RBN,04003,Office Service
+RBN,04004,Office
+RBN,04005,Office
+RBN,04006,Office
+RBN,04009,Office
+RBN,04010,Office
+RBN,04011,Office
+RBN,04012,Office
+RBN,04013,Office
+RBN,04014,Office Service
+RBN,04021,Special Class Lab
+RBN,04026,Office Service
+RBN,04029,Office Service
+RBN,04038,Office
+RBN,04047,Office
+RBN,04049,Office
+RBN,01000,Lobby
+RBN,01004,Public Corridor
+RBN,01004A,Stairway
+RBN,01004B,Stairway
+RBN,01004C,Stairway
+RBN,01019,Public Corridor
+RBN,01029,Public Corridor
+RBN,01030,Public Corridor
+RBN,01031,Womens Public Restroom
+RBN,01032,Mens Public Restroom
+RBN,01040,Lobby
+RBN,02000,Lobby
+RBN,02001,Lobby
+RBN,02002,Lobby
+RBN,02008,Public Corridor
+RBN,02019,Stairway
+RBN,02020,Public Corridor
+RBN,02023,Public Corridor
+RBN,02029,Public Corridor
+RBN,02030,Womens Public Restroom
+RBN,02031,Mens Public Restroom
+RBN,02034,Public Corridor
+RBN,02036,Public Corridor
+RBN,02037,Stairway
+RBN,02042,Public Corridor
+RBN,02042A,Stairway
+RBN,02048,Lobby
+RBN,03000,Lobby
+RBN,03017,Stairway
+RBN,03019,Public Corridor
+RBN,03021,Public Corridor
+RBN,03033,Public Corridor
+RBN,03034,Classroom Service
+RBN,03036,Classroom Service
+RBN,03037,Stairway
+RBN,03042,Public Corridor
+RBN,03043,Public Corridor
+RBN,03045,Stairway
+RBN,03051,Public Corridor
+RBN,03054,Womens Public Restroom
+RBN,03055,Mens Public Restroom
+RBN,04000,Lobby
+RBN,04016,Stairway
+RBN,04017,Public Corridor
+RBN,04022,Public Corridor
+RBN,04028,Public Corridor
+RBN,04035,Stairway
+RBN,04036,Womens Public Restroom
+RBN,04037,Mens Public Restroom
+RBN,04039,Conference Room
+RBN,04041,Public Corridor
+RBN,04042,Stairway
+RBN,01001,Reading Study Room
+RBN,01021,Special Class Lab Service
+RBN,01022,Special Class Lab Service
+RBN,01026,Special Class Lab Service
+RBN,01028,Special Class Lab Service
+RBN,02014,Office
+RBN,02015,Office
+RBN,04007,Office
+RBN,04020,Special Class Lab Service
+RBN,04031,Non-Class Lab
+RBN,04044,Office
+RBN,04045,Office
+RBN,01024,Special Class Lab
+RBN,01027,Special Class Lab
+RBN,01034,Special Class Lab
+RBN,04019,Class Laboratory
+RBN,04021A,Lounge
+RBN,04032,Class Laboratory
+RBN,04033,Class Laboratory Srv
+RBN,02011,Classroom
+RBN,02021,Special Class Lab
+RBN,02033,Special Class Lab
+RBN,02035,Special Class Lab
+RBN,02046,Special Class Lab
+RBN,04034,Class Laboratory
+RBN,02032,Non-Class Lab
+RBN,02028,Special Class Lab
+RBN,03044,Merchandising
+RBN,02007,Classroom
+RBN,02012,Classroom
+RBN,04024,Classroom
+RBN,04025,Classroom
+RBN,04046,Office
+RBN,03035,Classroom
+RBN,04027,Class Laboratory
+RBN,01010,Non-Class Lab
+RBN,02004,Office
+RBN,02022,Special Class Lab
+RBN,03046,Office
+RBN,03048,Office
+RBN,03049,Office
+RBN,03038,Classroom
+RBN,03039,Classroom
+RBN,03040,Classroom
+RBN,03041,Classroom
+RBN,03022,Reading Study Room
+RBN,03001,Office
+RBN,03004,Office
+RBN,03005,Office
+RBN,03006,Office
+RBN,03007,Office
+RBN,03008,Office
+RBN,03009,Office
+RBN,03010,Office
+RBN,03014,Office
+RBN,03016,Office Service
+RBN,03024,Conference Room
+RBN,03027,Office
+RBN,04001,Office
+RBN,04048,Office
+RBN,01005,Non-Class Lab
+RBN,01006,Reading Study Room
+RBN,01008,Reading Study Room
+RBN,01009,Reading Study Room
+RBN,01011,Reading Study Room
+RBN,01012,Office
+RBN,01013,Office
+RBN,01014,Office
+RBN,01015,Office
+RBN,01017,Office Service
+RBN,01033,Special Class Lab
+RBN,01038,Office
+RBN,01039,Non-Class Lab
+RBN,02013,Office
+RBN,02024,Non-Class Lab
+RBN,02025,Non-Class Lab
+RBN,02026,Non-Class Lab Srv
+RBN,02039,Office Service
+RBN,03002,Office
+RBN,03003,Office Service
+RBN,03011,Office
+RBN,03012,Office
+RBN,03013,Office
+RBN,03015,Office
+RBN,03025,Office Service
+RBN,03026,Office
+RBN,03028,Office
+RBN,03029,Office
+RBN,03030,Office
+RBN,03031,Office
+RBN,03032,Office
+RBN,03047,Office Service
+RBS,01011,Office
+RBS,01029,Special Class Lab
+RBS,01035,Office
+RBS,02003,Office
+RBS,03002,Office
+RBS,01003,Office
+RBS,01005,Office
+RBS,01006,Office
+RBS,01007,Office
+RBS,01008,Office
+RBS,01009,Office
+RBS,01038,Office Service
+RBS,02023,Conference Room
+RBS,03001,Office
+RBS,03003,Office
+RBS,03005,Office
+RBS,03006,Office
+RBS,03029,Office
+RBS,03033,Office
+RBS,01001,Lobby
+RBS,01002,Public Corridor
+RBS,01010,Public Corridor
+RBS,01010A,Stairway
+RBS,01010B,Stairway
+RBS,01010C,Stairway
+RBS,01014,Womens Public Restroom
+RBS,01015,Mens Public Restroom
+RBS,01020,Public Corridor
+RBS,01025,Public Corridor
+RBS,01026,Lobby
+RBS,02000,Lobby
+RBS,02010,Public Corridor
+RBS,02010A,Stairway
+RBS,02010B,Stairway
+RBS,02010C,Stairway
+RBS,02012,Mens Public Restroom
+RBS,02016,Public Corridor
+RBS,02017,Womens Public Restroom
+RBS,02018,Womens Public Restroom
+RBS,02020,Public Corridor
+RBS,02020A,Merchandising
+RBS,02021,Public Corridor
+RBS,02022,Lobby
+RBS,02025,Classroom Service
+RBS,03010,Public Corridor
+RBS,03010A,Stairway
+RBS,03010B,Stairway
+RBS,03010C,Stairway
+RBS,03011,Womens Public Restroom
+RBS,03012,Mens Public Restroom
+RBS,03016,Public Corridor
+RBS,03020,Public Corridor
+RBS,03024,Public Corridor
+RBS,03026,Non-Class Lab
+RBS,04003,Womens Public Restroom
+RBS,04004,Mens Public Restroom
+RBS,04008,Public Corridor
+RBS,04010,Public Corridor
+RBS,04011,Stairway
+RBS,04016,Public Corridor
+RBS,04018,Stairway
+RBS,04019,Stairway
+RBS,04022,Public Corridor
+RBS,01023,Special Class Lab Service
+RBS,01028,Individual Study Lab
+RBS,01030,Special Class Lab Service
+RBS,03019,Class Laboratory Srv
+RBS,03020A,Non-Class Lab Srv
+RBS,03020B,Non-Class Lab Srv
+RBS,03021,Class Laboratory Srv
+RBS,03022,Class Laboratory
+RBS,04014,Class Laboratory
+RBS,01034,Non-Class Lab
+RBS,01032,Special Class Lab
+RBS,01019,Non-Class Lab
+RBS,01024,Special Class Lab
+RBS,01027,Special Class Lab
+RBS,02019,Classroom
+RBS,03018,Class Laboratory
+RBS,04015,Conference Room
+RBS,04015A,Conference Room Service
+RBS,04015B,Conference Room Service
+RBS,04017,Conference Room
+RBS,02027,Office Service
+RBS,01031,Classroom
+RBS,01000,Public Corridor
+RBS,02015,Special Class Lab
+RBS,02024,Classroom
+RBS,01021,Non-Class Lab
+RBS,01022,Non-Class Lab
+RBS,01036,Office
+RBS,01037,Office
+RBS,02001,Office
+RBS,02002,Office
+RBS,02004,Office
+RBS,02005,Office Service
+RBS,02006,Conference Room
+RBS,02008,Office Service
+RBS,02026,Conference Room Service
+RBS,02029,Office
+RBS,02030,Office
+RBS,02031,Office
+RBS,02032,Office
+RBS,03000,Public Corridor
+RBS,03004,Conference Room
+RBS,03013,Office
+RBS,03015,Non-Class Lab Srv
+RBS,03017,Non-Class Lab Srv
+RBS,03023,Non-Class Lab Srv
+RBS,03025,Non-Class Lab
+RBS,03028,Office
+RBS,03030,Office
+RBS,03031,Office
+RBS,03032,Office
+RBS,03034,Non-Class Lab
+RBS,03035,Non-Class Lab
+RBS,03036,Non-Class Lab
+RBS,04000,Public Corridor
+RBS,04005,Non-Class Lab Srv
+RBS,04007,Class Laboratory
+RBS,04009,Non-Class Lab
+RBS,04010A,Non-Class Lab Srv
+RBS,04010B,Non-Class Lab Srv
+RBS,04010C,Non-Class Lab Srv
+RBS,04010D,Non-Class Lab Srv
+RBS,04012,Class Laboratory
+RBS,04013,Class Laboratory Srv
+RBS,01018,Non-Class Lab Srv
+RBS,01039,Office
+RBS,02007,Office
+RBS,02033,Office
+RBS,02013,Reading Study Room
+RBS,03007,Office
+RBS,03007A,Office
+STE,00102,Womens Public Restroom
+STE,00103,Mens Public Restroom
+STE,00107,Office
+STE,00108,Office Service
+STE,00109,Office
+STE,00109A,Office
+STE,00110,Office
+STE,00110A,Office
+STE,00111,Office
+STE,00112,Office
+STE,00114,Conference Room
+STE,00116,Office
+STE,00117,Office
+STE,00118,Office
+STE,00120,Office
+STE,00120A,Office Service
+STE,00121,Office
+STE,00121A,Office
+STE,00122,Public Corridor
+STE,00122A,Office
+STE,00122B,Office
+STE,00122C,Office
+STE,00122D,Office
+STE,00122E,Office
+STE,00123,Office Service
+STE,00124,Shop Service
+STE,00124A,Shop Service
+STE,00125A,Office
+STE,00125B,Office Service
+STE,00125C,Office
+STE,00125D,Office
+STE,00125E,Office
+STE,00125F,Office Service
+STE,00127,Classroom
+STE,00129A,Central Computer/Telecomm Srv
+STE,00202B,Office Service
+STE,00202C,Conference Room
+STE,00203,Office Service
+STE,00205,Office
+STE,00205A,Office
+STE,00206,Mens Public Restroom
+STE,00207,Womens Public Restroom
+STE,00208A,Office Service
+STE,00209,Office
+STE,00209A,Office
+STE,00210,Office
+STE,00211,Office
+STE,00212,Office
+STE,00223,Public Corridor
+STE,00224A,Office
+STE,00224C,Office
+STE,00225,Office
+STE,00226,Conference Room
+STE,00227,Office
+STE,00230,Office
+STE,00230A,Office
+STE,00230E,Office Service
+STE,00230G,Office Service
+STE,00301,Meeting Room
+STE,00302,Office Service
+STE,00303,Mens Public Restroom
+STE,00304,Public Corridor
+STE,00305,Office Service
+STE,00306,Womens Public Restroom
+STE,00309A,Office Service
+STE,00309B,Office Service
+STE,00310,Office Service
+STE,00311,Office
+STE,00312,Office
+STE,00312A,Office
+STE,00313,Office
+STE,00314,Office
+STE,00315,Office
+STE,00317,Office
+STE,00318,Public Corridor
+STE,00320,Public Corridor
+STE,00321,Office Service
+STE,00322,Office Service
+STE,00323,Office
+STE,00323A,Office
+STE,00324,Meeting Room
+STE,00325,Office
+STE,00325A,Office Service
+STE,00326,Office
+STE,00327,Office
+STE,00328,Office
+STE,00329,Office
+STE,00330,Office Service
+STE,00331,Public Corridor
+STE,00332,Office Service
+STE,00333,Office
+STE,00333A,Office Service
+STE,00334,Office
+STE,00334A,Office Service
+STE,00335,Office
+STE,00336A,Office
+STE,00336B,Office
+STE,00336C,Office
+STE,00338,Office
+STE,00339,Office
+STE,00340,Office
+STE,00341,Office
+STE,00342,Office
+STE,00343,Office
+STE,00344,Office
+STE,00345,Office
+STE,00347,Office Service
+STE,00349,Office Service
+STE,00350,Public Corridor
+STE,00351,Public Corridor
+STE,00352,Public Corridor
+STE,00354,Womens Public Restroom
+STE,00356,Mens Public Restroom
+STE,00357,Office
+STE,00358,Office
+STE,00359,Office
+STE,00360,Office
+STE,00367,Public Corridor
+STE,00367A,Office Service
+STE,00369,Office
+STE,00370,Office
+STE,00373,Public Corridor
+STE,00374,Public Corridor
+STE,00376,Office
+STE,00377,Office
+STE,00378,Office
+STE,00379,Office
+STE,00380,Office
+STE,00381,Office
+STE,00382,Public Corridor
+STE,0SNW1,Stairway
+STE,0SNW2,Stairway
+STE,0SNW3,Stairway
+STE,0SSO1,Stairway
+STE,0SSO2,Stairway
+STE,0SSO3,Stairway
+STE,00125,Office
+STE,00126,Classroom Service
+STE,00130,Central Computer/Telecomm Srv
+STE,00213,Office
+STE,00213A,Office
+STE,00214B,Office
+STE,00215,Office
+STE,00216,Office
+STE,00217,Office
+STE,00218,Office
+STE,00219,Office
+STE,00220,Office
+STE,00221,Office
+STE,00222,Office
+STE,00224,Office
+STE,00228,Office Service
+STE,00228A,Office Service
+STE,00230B,Office
+STE,00230C,Office
+STE,00230D,Office
+STE,00230F,Office Service
+STE,00316,Office Service
+STE,00336,Office
+STE,00337,Office
+STE,00346,Office
+STE,00348,Office Service
+STE,00361,Office Service
+STE,00362,Office
+STE,00364,Office
+STE,00365,Office
+STE,00366,Office
+STE,00371,Office
+STE,00372,Office
+STE,00375,Office
+STE,00115,Office Service
+STE,00202,Office
+STE,00202A,Office
+STE,00214,Office
+STE,00221A,Office
+UC,02101,Lobby
+UC,02425,Merchandising
+UC,03120,Womens Public Restroom
+UC,03121,Mens Public Restroom
+UC,03156,Office
+UC,03176A,Shaft
+UC,03200,Public Corridor
+UC,03442,Office Service
+UC,02102,Office
+UC,02114,Assembly
+UC,02115,Assembly (Auditorium) Srv
+UC,02116,Assembly (Auditorium) Srv
+UC,02119,Assembly (Auditorium) Srv
+UC,02123,Office
+UC,02140,Office
+UC,02141,Office
+UC,02142,Office
+UC,02143,Office Service
+UC,02150,Office
+UC,02151,Office Service
+UC,02152,Office
+UC,02153,Office
+UC,02154,Office
+UC,02155,Office Service
+UC,02156,Office Service
+UC,02405,Office
+UC,02421,Office
+UC,02422,Office
+UC,03100,Lounge
+UC,03101,Lounge
+UC,03140,Meeting Room
+UC,03150,Office
+UC,03152,Office Service
+UC,03153,Office Service
+UC,03154,Office
+UC,03155,Office Service
+UC,03161,Office Service
+UC,03162A,Office Service
+UC,03162B,Office Service
+UC,03162C,Office Service
+UC,03162D,Office Service
+UC,03163,Office
+UC,03170,Office
+UC,03172,Conference Room
+UC,03173,Office
+UC,03174,Office
+UC,03176,Office
+UC,03178,Office Service
+UC,03401,Office
+UC,03403,Office
+UC,03404,Office
+UC,03405,Office
+UC,03406,Office
+UC,03408,Conference Room
+UC,03409,Office
+UC,03410,Office
+UC,03411,Office
+UC,03412,Office Service
+UC,03413,Office
+UC,03421,Office Service
+UC,03422A,Meeting Room
+UC,03422B,Meeting Room
+UC,03430,Lounge
+UC,03431,Office Service
+UC,03440,Office
+UC,03443,Office
+UC,03444,Office
+UC,03445,Office
+UC,03446,Office
+UC,03447,Office
+UC,03448,Office
+UC,03449,Office Service
+UC,02144,Conference Room
+UC,03171,Office
+UC,03400,Office
+UC,03402,Office
+UC,03407,Office
+UC,03441,Office
+UC,00105,Lobby
+UC,00109,Public Corridor
+UC,00110,Public Corridor
+UC,01200,Lobby
+UC,01202,Unisex Restroom
+UC,01203,Lobby
+UC,01300,Food Facility
+UC,01301,Food Facility
+UC,01310,Food Facility Service
+UC,01311,Food Facility Service
+UC,01312,Food Facility Service
+UC,01313,Food Facility Service
+UC,01314,Food Facility Service
+UC,01320,Food Facility Service
+UC,01321,Office
+UC,01322,Food Facility Service
+UC,01323,Food Facility Service
+UC,01331,Public Corridor
+UC,01332,Womens Public Restroom
+UC,01334,Mens Public Restroom
+UC,02110,Lobby
+UC,02111,Public Corridor
+UC,02112,Public Corridor
+UC,02113,Public Corridor
+UC,02120,Womens Public Restroom
+UC,02121,Mens Public Restroom
+UC,02124,Office
+UC,02125,Public Corridor
+UC,02311,Office
+UC,02314,Food Facility
+UC,02320,Loading Dock
+UC,02331,Womens Public Restroom
+UC,02333,Mens Public Restroom
+UC,02400,Food Facility
+UC,02402,Merchandising Service
+UC,02406,Food Facility Service
+UC,02407,Food Facility Service
+UC,02408,Food Facility Service
+UC,02420,Merchandising
+UC,02424,Merchandising Service
+UC,03102,Public Corridor
+UC,03103,Public Corridor
+UC,03125,Public Corridor
+UC,03141,Meeting Room Service
+UC,03151,Public Corridor
+UC,03160,Office Service
+UC,03162,Office Service
+UC,03177,Office
+UC,03300A,Meeting Room
+UC,03300B,Meeting Room
+UC,03300C,Meeting Room
+UC,03300D,Meeting Room
+UC,03300E,Meeting Room
+UC,03306,Meeting Room Service
+UC,03307,Meeting Room Service
+UC,03310,Lobby
+UC,03320,Office
+UC,03321,Office
+UC,03322,Conference Room
+UC,03325,Office
+UC,03326,Office
+UC,03331,Womens Public Restroom
+UC,03333,Mens Public Restroom
+UC,03461,Merchandising Service
+UC,03463,Merchandising Service
+UC,03498,Public Corridor
+UC,03499,Public Corridor
+UC,00101S,Stairway
+UC,00102S,Stairway
+UC,03305,Meeting Room Service
+UC,03460,Merchandising
+UC,02316,Food Facility Service
+UC,02401,Merchandising
+UC,03312,Assembly (Auditorium) Srv
+UC,03313,Public Corridor
+UC,03114B,Reading Study Room
+UC,03323,Office Service
+UC,03432,Central Computer/Telecomm Srv
+UC,02300,Food Facility
+UC,02100,Lobby
+UC,03162E,Office Service
+UC,03162F,Office Service
+UC,03162G,Office Service
+UC,02160,Office
+UC,02161,Office
+UC,02162,Office
+UC,02411,Food Facility Service
+UC,03110,Office
+UC,03111,Office
+UC,03111A,Office
+UC,03111B,Office Service
+UC,03111C,Conference Room
+UC,03112,Office
+UC,03113,Office
+UC,03115,Office
+UC,02410,Circulation Area
+UC,02410A,Food Facility Service
+UC,02410B,Office
+UC,02303,Lounge
+UC,03324,Office
+UC,03114A,Office Service
+UC,03123,Office Service
+WTB,00001,Lobby
+WTB,00002,Lobby
+WTB,00005,Lobby
+WTB,00100,Lobby
+WTB,00100A,Public Corridor
+WTB,00100B,Public Corridor
+WTB,00100D,Lobby
+WTB,00101,Food Facility
+WTB,00101A,Food Facility Service
+WTB,00104,Mens Public Restroom
+WTB,00105,Womens Public Restroom
+WTB,00107,Central Computer/Telecomm
+WTB,00121A,Public Corridor
+WTB,00130,Public Corridor
+WTB,00130A,Public Corridor
+WTB,00132,Reading Study Room
+WTB,00133C,Meeting Room Service
+WTB,00133D,Meeting Room Service
+WTB,00135,Reading Study Room
+WTB,00136C,Meeting Room Service
+WTB,00136D,Meeting Room Service
+WTB,00137C,Meeting Room Service
+WTB,00137D,Meeting Room Service
+WTB,00138,Reading Study Room
+WTB,00142,Reading Study Room
+WTB,00143,Reading Study Room
+WTB,00150,Lobby
+WTB,00150A,Public Corridor
+WTB,00200,Lobby
+WTB,00200A,Public Corridor
+WTB,00200B,Public Corridor
+WTB,00200C,Public Corridor
+WTB,00202,Mens Public Restroom
+WTB,00203,Womens Public Restroom
+WTB,00205,Central Computer/Telecomm
+WTB,00208,Conference Room
+WTB,00210,Public Corridor
+WTB,00210A,Public Corridor
+WTB,00211,Meeting Room
+WTB,00212,Meeting Room
+WTB,00212G,Public Corridor
+WTB,00213,Meeting Room
+WTB,00214,Meeting Room
+WTB,00215,Meeting Room
+WTB,00216,Meeting Room
+WTB,00217,Meeting Room
+WTB,00231,Office
+WTB,00232,Office
+WTB,00233,Office
+WTB,00234A,Reading Study Room
+WTB,00234C,Meeting Room Service
+WTB,00234D,Meeting Room Service
+WTB,00235A,Reading Study Room
+WTB,00235C,Meeting Room Service
+WTB,00235D,Meeting Room Service
+WTB,00236A,Reading Study Room
+WTB,00236C,Meeting Room Service
+WTB,00236D,Meeting Room Service
+WTB,00237,Office
+WTB,00238,Office
+WTB,00239,Office
+WTB,00241,Office
+WTB,00242,Office
+WTB,00243,Office
+WTB,00247,Office
+WTB,00248,Office
+WTB,00249,Office
+WTB,00250,Office
+WTB,00251,Office
+WTB,00255,Office
+WTB,00256,Office
+WTB,00261,Public Corridor
+WTB,00261A,Reading Study Room
+WTB,00261B,Public Corridor
+WTB,00263,Reading Study Room
+WTB,00264,Reading Study Room
+WTB,00271,Central Computer/Telecomm
+WTB,00300,Lobby
+WTB,00300A,Public Corridor
+WTB,00300B,Public Corridor
+WTB,00305,Central Computer/Telecomm
+WTB,00309,Lounge
+WTB,00312,Mens Public Restroom
+WTB,00313,Womens Public Restroom
+WTB,00320A,Public Corridor
+WTB,00320B,Public Corridor
+WTB,00341,Office
+WTB,00342,Office
+WTB,00343,Office
+WTB,00344,Office
+WTB,00345,Office
+WTB,00346,Office
+WTB,00347,Office
+WTB,00348,Office
+WTB,00349,Office
+WTB,00360,Public Corridor
+WTB,00360A,Public Corridor
+WTB,00363,Office
+WTB,00364,Office
+WTB,00365,Office
+WTB,00366,Office
+WTB,00367,Office
+WTB,00368,Office
+WTB,00369,Office
+WTB,00370,Office
+WTB,00371,Public Corridor
+WTB,00371A,Reading Study Room
+WTB,00373,Reading Study Room
+WTB,00374,Reading Study Room
+WTB,0SNO2,Stairway
+WTB,0SNO3,Stairway
+WTB,0SSO1,Stairway
+WTB,0SSO2,Stairway
+WTB,0SSO3,Stairway
+WTB,00321A,Public Corridor
+WTB,00100C,Office Service
+WTB,00200D,Office Service
+WTB,00133,Meeting Room
+WTB,00136,Meeting Room
+WTB,00137,Meeting Room
+WTB,00141,Reading Study Room
+WTB,00262,Reading Study Room
+WTB,00372,Reading Study Room
+WTB,00120,Office
+WTB,00121,Conference Room
+WTB,00122,Office
+WTB,00123,Office
+WTB,00124,Office Service
+WTB,00126,Office Service
+WTB,00127,Office
+WTB,00128,Office
+WTB,00129,Office
+WTB,00257,Office
+WTB,00327,Office
+WTB,00310,Lounge Service
+WTB,00321,Office
+WTB,00322,Office
+WTB,00323,Office
+WTB,00324,Office Service
+WTB,00325,Office Service
+WTB,00326,Conference Room
+WTB,00328,Office
+WTB,00329,Office
+WTB,00331,Office Service
+WTB,00332,Office Service
+WTB,00333,Conference Room
+WTB,00334,Office Service
+WTB,00361,Non-Class Lab
+WTB,00361A,Non-Class Lab
+WTB,00361B,Non-Class Lab
+WTB,376.12,Office
+WTB,376.40,Office
+WTB,00234,Meeting Room
+WTB,00235,Meeting Room
+WTB,00236,Meeting Room
+WTB,376.10,Non-Class Lab
+WTB,376.21,Non-Class Lab
+WTB,376.23,Non-Class Lab
+WTB,376.25,Non-Class Lab
+WTB,376.29,Non-Class Lab
+WTB,376.35,Non-Class Lab
+WTB,376.37,Non-Class Lab
