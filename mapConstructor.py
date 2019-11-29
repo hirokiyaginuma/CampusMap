@@ -46,38 +46,51 @@ class MapConstructor:
                 floordict[key] = val
 
 
-        Floor1 = 'Floor 1:<br><br>'
-        Floor2 = 'Floor 2:<br><br>'
-        Floor3 = 'Floor 3:<br><br>'
-        Floor4 = 'Floor 4:<br><br>'
-        Floor5 = 'Floor 5:<br><br>'
-        OtherFloor = 'Other:<br><br>'
+        Floor1 = 'Floor 1:;'
+        Floor2 = 'Floor 2:;'
+        Floor3 = 'Floor 3:;'
+        Floor4 = 'Floor 4:;'
+        Floor5 = 'Floor 5:;'
+        OtherFloor = 'Other:;'
 
         for i, build in enumerate(self.buildCodes):
             if build == code and self.roomFloor[i] == '1':
-                Floor1 += '<nbsp>Room Number: ' + self.roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + \
-                             self.roomType[i] + '<br>'
+                Floor1 += '<nbsp>Room Number: ' + self.roomNum[i] + ';' + 'Type: ' + \
+                             self.roomType[i] + ';'
             elif build == code and self.roomFloor[i] == '2':
-                Floor2 += 'Room Number: ' + self.roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + self.roomType[
-                    i] + '<br>'
+                Floor2 += 'Room Number: ' + self.roomNum[i] + ';' + 'Type: ' + self.roomType[
+                    i] + ';'
             elif build == code and self.roomFloor[i] == '3':
-                Floor3 += 'Room Number: ' + self.roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + self.roomType[
-                    i] + '<br>'
+                Floor3 += 'Room Number: ' + self.roomNum[i] + ';' + 'Type: ' + self.roomType[
+                    i] + ';'
             elif build == code and self.roomFloor[i] == '4':
-                Floor4 += 'Room Number: ' + self.roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + self.roomType[
-                    i] + '<br>'
+                Floor4 += 'Room Number: ' + self.roomNum[i] + ';' + 'Type: ' + self.roomType[
+                    i] + ';'
             elif build == code and self.roomFloor[i] == '5':
-                Floor5 += 'Room Number: ' + self.roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + self.roomType[
-                    i] + '<br>'
+                Floor5 += 'Room Number: ' + self.roomNum[i] + ';' + 'Type: ' + self.roomType[
+                    i] + ';'
             elif build == code:
-                OtherFloor += 'Room Number: ' + self.roomNum[i] + '&nbsp;&nbsp;&nbsp;&nbsp;' + 'Type: ' + self.roomType[
-                    i] + '<br>'
+                OtherFloor += 'Room Number: ' + self.roomNum[i] + ';' + 'Type: ' + self.roomType[
+                    i] + ';'
+
+        if (Floor1 == "Floor 1:;"):
+            Floor1 = ""
+        if (Floor2 == "Floor 2:;"):
+            Floor2 = ""
+        if (Floor3 == "Floor 3:;"):
+            Floor3 = ""
+        if (Floor4 == "Floor 4:;"):
+            Floor4 = ""
+        if (Floor5 == "Floor 5:;"):
+            Floor5 = ""
+        if (OtherFloor == "Other:;"):
+            OtherFloor = ""
 
         html = """
                           <h1>""" + buildingName + """</h1><br>
-                          <p>""" + Floor1 + "<br><br>" + Floor2 + "<br><br>" + Floor3 + "<br><br>" + Floor4 + \
-               "<br><br>" + Floor5 + "<br><br>" + OtherFloor + "<br><br>" + """
-                          </p>
+                            
+                          <p id="f1">""" + Floor1 + "</p><p id='f2'>" + Floor2 + "</p><p id='f3'>" + Floor3 + "</p><p id='f4'>" + Floor4 + \
+               "</p><p id='f5'>" + Floor5 + "</p><p id='fo'>" + OtherFloor + "</p>" + """
                           """
         with open(self.mapfilepath_ + '\\roomList/' + code + '.html', 'w') as fw:
             fw.write(html)
@@ -198,6 +211,7 @@ class MapConstructor:
                 COBhtml += line
 
         cobTxt = folium.Html(COBhtml, script=True)
+
 
         cobWindow = folium.Popup(html=cobTxt, min_width=400, max_width=900, max_height=300, parse_html=True)
 
@@ -422,7 +436,7 @@ class MapConstructor:
         UC.add_to(UTmap)
 
         # W.T. Brookshire Hall
-        self.buildingHTML('WTB', 'University Center')
+        self.buildingHTML('WTB', 'W.T. Brookshire Hall')
 
         WTBhtml = ''
 
