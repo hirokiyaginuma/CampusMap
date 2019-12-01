@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>
+		Events
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+	<div id='menu' style="height: 100%; width: 400px; background-color: #e35205; position: fixed; bottom: 0; left: 0; display: inline-block;">
+		<input type="text" placeholder="Search for building..." style="width: 400px; height: 20px;"></input>
+		<h3>Building Information: </h3>
+		<br><b>Building Name:</b> College of Business
+		<br><b>Floors:</b> 4
+		<br><b>Operating Hours:</b> 7:30 a.m. - 5 p.m.
+		<br><b>Wheel Chair Accessible:</b> Yes
+		<div id='imgFrame' style="width: 400px; background-color: #002d72; position: fixed; bottom: 20; left: 0;">
+			<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0; background-color: #002d72' src='1.jpg'>
+		</div>
+		<div id='selectorFrame' style="height: 20px; width: 400px; background-color: black; position: fixed; bottom: 0; text-align: center; left: 0;">
+		</div>
+	</div>
+	<!--<div id="close" style="height: 1000px; width: 420px;">
+		">"
+	</div>-->
+
+	<iframe id="i_frame" style="position: fixed; left: 400px; height: 100%; width: 100%;" src="./map.html">
+	</iframe>
+
+	<script>
+		var i = 1;
+		var imageCount = 5;
+		var Imageval;
+		var iframe_loaded;
+		var radStr = "";
+		var time = 6000;
+		var iframe = document.getElementById('id_description_iframe');
+		var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+		if (!iframeDocument)
+		{
+			throw "iframe couldn't be found in DOM.";
+		}
+
+var iframeContent = iframeDocument.getElementById('frameBody');
+		//https://stackoverflow.com/questions/29340664/javascript-retrieve-names-of-files-in-a-folder
+
+		$('#i_frame').on('load', function(event)
+		{
+			console.log('iframe');
+			addEventList(event);
+		});
+
+		function popMenu(e)
+		{
+			console.log(e.target.innerHTML());
+		}
+
+		function addEventList(e)
+		{
+
+			console.log(document.getElementsByClassName("leaflet-interactive").length);
+			console.log(document.getElementsByTagName("path").length);
+			
+			if (e.target)
+			{
+			console.log(e.target);
+			/*if (document.getElementsByTagName("path").length > 0)
+			{*/
+				clearInterval(iframe_loaded);
+			/*}*/
+				for (var k = 0; k < document.getElementsByTagName("path").length; k++)
+				{
+					console.log(k);
+					document.getElementsByTagName("path")[k].addEventListener("click", popMenu);
+				}
+			}
+		}
+
+		window.onload = function(event)
+		{
+			iframe_loaded = setInterval(function() { addEventList(event) }, 100);
+
+			for(var k = 0; k < imageCount; k++)
+			{
+				z = k+1;
+				radStr  += "<input type='radio' name='imgNum' value='" + z + "' onclick='clearInterval(Imageval); i = " + z + "; changeImage(); Imageval = setInterval(function(){ changeImage() }, time);'>";
+			}
+			document.getElementById('selectorFrame').innerHTML = radStr;
+			document.getElementsByName('imgNum')[i - 1].checked = true;
+			i++;
+			Imageval = setInterval(function(){ changeImage() }, time);
+		}
+
+		function changeImage()
+		{
+			document.getElementById('imgFrame').innerHTML = "<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='./" + i + ".jpg'>";
+			document.getElementsByName('imgNum')[i - 1].checked = true;
+			if (i < imageCount)
+			{
+				i++;
+			}
+			else
+			{
+				i = 1;
+			}
+		}
+	</script>
+
+</body>
+</html>
