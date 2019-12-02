@@ -4,6 +4,8 @@
 * Folium - pip instal folium
 * PyQt5 - pip install PyQt5
 * PyQtWebEngine - pip install PyQtWebEngine
+* Selenum
+* BeautifulSoup
 
 
 
