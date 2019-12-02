@@ -6,7 +6,7 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 class Ui_MapScreen(object):
     def __init__(self):
         self.maphtmlpath_ = os.getcwd() + '\\mapfile\\map\\events.html'
-        self.path_ = "http://localhost:8080/events.html"
+        self.path_ = "http://localhost:8080/map/events.html"
 
 
     def setupUi(self, MapScreen):

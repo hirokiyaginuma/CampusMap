@@ -5,6 +5,7 @@ from options import Ui_OptionWindow
 from HomeScreen import Ui_HomeScreen
 from MapScreen import Ui_MapScreen
 from mapConstructor import MapConstructor
+from event import Event
 from webServer import WebServer
 
 
@@ -17,7 +18,7 @@ class Welcome(QtWidgets.QMainWindow, Ui_WelcomeWindow):
 
     def homeBotton(self):
         self.homescreen = HomeScreen()
-        self.homescreen.show()
+        self.homescreen.showFullScreen()
         self.hide()
 
     def optionsBotton(self):
@@ -33,8 +34,10 @@ class Options(QtWidgets.QMainWindow, Ui_OptionWindow):
         self.HTMLBotton.clicked.connect(self.HTML)
 
     def mapBotton(self):
-        self.mapscreen = MapScreen()
-        self.mapscreen.show()
+        event = Event()
+        event.getEvent()
+        event.downloadImage()
+        print("Event created.")
 
     def HTML(self):
         self.map = MapConstructor()
@@ -49,7 +52,7 @@ class HomeScreen(QtWidgets.QMainWindow, Ui_HomeScreen):
 
     def mapBotton(self):
         self.mapscreen = MapScreen()
-        self.mapscreen.show()
+        self.mapscreen.showFullScreen()
         self.hide()
 
 
@@ -61,8 +64,8 @@ class MapScreen(QtWidgets.QMainWindow, Ui_MapScreen):
 
     def homeBotton(self):
         self.homescreen = HomeScreen()
-        self.homescreen.show()
         self.hide()
+        self.homescreen.showFullScreen()
 
 
 if __name__ == '__main__':
@@ -72,4 +75,3 @@ if __name__ == '__main__':
     w = Welcome()
     w.show()
     sys.exit(app.exec_())
-    webserver.stopServer()

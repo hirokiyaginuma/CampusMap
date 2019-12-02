@@ -3,106 +3,254 @@
 	<title>
 		Events
 	</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./jquery.js"></script>
 	<meta charset="utf-8"/>
 </head>
 <body>
 
+	<!--<iframe id="eventsSite" src="https://uttyler.campuslabs.com/engage/events/"></iframe>-->
 	<div id='menu' style="height: 100%; width: 400px; background-color: #e35205; position: fixed; bottom: 0; left: 0; display: inline-block;">
-		<input type="text" placeholder="Search for building..." style="width: 400px; height: 20px;"></input>
-		<h3>Building Information: </h3>
-		<br><b>Building Name:</b> College of Business
-		<br><b>Floors:</b> 4
-		<br><b>Operating Hours:</b> 7:30 a.m. - 5 p.m.
-		<br><b>Wheel Chair Accessible:</b> Yes
+		<input id="srchBuilding" type="text" placeholder="Search for building..." style="width: 400px; height: 20px;"></input>
+		<select id="bsout" onclick='OpenPopUp();' style="width: 400px;">
+			<option>Nothing Has Been Searched For</option>
+		</select>
+			<h3 id="build_tag">Building Information: </h3>
+		<div id="build_info">
+			<b>Building Name:</b> <span id="building_name">Building Name</span>
+			<br><select onchange="changeCont();" id="selectFloor" style="width: 400px;">
+				<option>No Building Selected</option>
+				</select>
+			<br><b>Rooms:</b> <div id="content" style="overflow: auto; height: 150px;">No Building Selected</div>
+		</div>
 		<div id='imgFrame' style="width: 400px; background-color: #002d72; position: fixed; bottom: 20; left: 0;">
-			<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0; background-color: #002d72' src='1.jpg'>
+			<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0; background-color: #002d72' src='../eventimage/0.jpg'>
 		</div>
 		<div id='selectorFrame' style="height: 20px; width: 400px; background-color: black; position: fixed; bottom: 0; text-align: center; left: 0;">
 		</div>
 	</div>
-	<!--<div id="close" style="height: 1000px; width: 420px;">
-		">"
-	</div>-->
 
 	<iframe id="i_frame" style="position: fixed; left: 400px; height: 100%; width: 100%;" src="./map.html">
 	</iframe>
 
 	<script>
-		var i = 1;
-		var imageCount = 5;
+		var i = 0;
+		var imageCount;
 		var Imageval;
 		var iframe_loaded;
 		var radStr = "";
 		var time = 6000;
-		var iframe = document.getElementById('id_description_iframe');
-		var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-		if (!iframeDocument)
-		{
-			throw "iframe couldn't be found in DOM.";
-		}
-
-var iframeContent = iframeDocument.getElementById('frameBody');
+		var doc;
+		//circle_markers_
+		var cms = {};
+		//building names
+		var bn = {};
+		var bnArray = [];
+		var content;
+		var filtered;
+		var ifrm;
+		//use building name as [0] and building code as [1]
+		var buildNames = [];
+		document.getElementById("srchBuilding").addEventListener("input", function() { building_search(); });
 		//https://stackoverflow.com/questions/29340664/javascript-retrieve-names-of-files-in-a-folder
 
-		$('#i_frame').on('load', function(event)
+		function building_search()
 		{
-			console.log('iframe');
-			addEventList(event);
-		});
-
-		function popMenu(e)
-		{
-			console.log(e.target.innerHTML());
-		}
-
-		function addEventList(e)
-		{
-
-			console.log(document.getElementsByClassName("leaflet-interactive").length);
-			console.log(document.getElementsByTagName("path").length);
-			
-			if (e.target)
+			document.getElementById('bsout').innerHTML = "<option>Select A Building</option>";
+			count = 0;
+			for (var i = 0; i < bnArray.length; i++)
 			{
-			console.log(e.target);
-			/*if (document.getElementsByTagName("path").length > 0)
-			{*/
-				clearInterval(iframe_loaded);
-			/*}*/
-				for (var k = 0; k < document.getElementsByTagName("path").length; k++)
+				if (bnArray[i].includes(document.getElementById("srchBuilding").value.toLowerCase()))
 				{
-					console.log(k);
-					document.getElementsByTagName("path")[k].addEventListener("click", popMenu);
+					document.getElementById('bsout').innerHTML += "<option value='" + bnArray[i] + "'>" + bnArray[i].toUpperCase() + "</option>";
+					count++
 				}
 			}
+			if (document.getElementById('srchBuilding').value == "")
+			{
+				document.getElementById('bsout').innerHTML = "<option>Nothing Has Been Searched For</option>";
+			}
+			if (count == 0)
+			{
+				document.getElementById('bsout').innerHTML = "<option>No matches</option>";
+			}
+		}
+
+		function OpenPopUp()
+		{
+			value = document.getElementById('bsout').value;
+			index = bnArray.indexOf(value);
+			//console.log(value + " :: " + index + " :: " + cms[bn[value]]);
+			if ( cms[bn[value]] != null)
+			{
+				cms[bn[value]].openPopup();
+				ptag = doc.getElementsByClassName("leaflet-popup-content-wrapper")[0].getElementsByTagName('p');
+				for (var i = 0; i < ptag.length; i++)
+				{
+					//console.log(ptag[i]);
+					//console.log(doc.getElementsByClassName("leaflet-popup-content-wrapper")[0]);
+					ptag[i].style.display = "none";
+				}
+				cms[bn[value]].openPopup();
+				document.getElementById('bsout').innerHTML = "<option>Nothing Has Been Searched For</option>";
+				document.getElementById('srchBuilding').value = "";
+				popMenu();
+			}
+		}
+
+		function popMenu()
+		{
+			if (doc.getElementsByClassName("leaflet-popup-content-wrapper")[0])
+			{
+				index = doc.getElementsByClassName("leaflet-popup-content-wrapper").length - 1;
+				//console.log(doc.getElementsByClassName("leaflet-popup-content-wrapper")[index].children[0].children[0].getElementsByTagName('p')[0].display);
+				document.getElementById("building_name").innerHTML = doc.getElementsByClassName("leaflet-popup-content-wrapper")[index].children[0].children[0].getElementsByTagName('h1')[0].innerHTML;
+				//document.getElementById("content").innerHTML = doc.getElementsByClassName("leaflet-popup-content-wrapper")[index].children[0].children[0].getElementsByTagName('p')[0].innerHTML;
+
+				//this is the pop up menu content that we want in our menu
+				content = doc.getElementsByClassName("leaflet-popup-content-wrapper")[index].children[0].children[0].getElementsByTagName('p');
+				//this sets the select tag to null
+				document.getElementById('selectFloor').innerHTML = "";
+				//for loop to add the floors
+				for (var k = 0; k < content.length; k++)
+				{
+
+					doc.getElementsByClassName("leaflet-popup-content-wrapper")[index].children[0].children[0].getElementsByTagName('p')[k].style.display = "none";
+					if (content[k].id == "fo")
+					{
+						
+						if (content[k].innerHTML != null && content[k].innerHTML != "")
+						{
+							//console.log("fo:" + content[k].innerHTML + ":");
+							document.getElementById('selectFloor').innerHTML += "<option value='Other Floors'>Other Floors</option>";
+						}
+					}
+					else
+					{
+						if (content[k].innerHTML != null && content[k].innerHTML != "")
+						{
+							//console.log("f:" + content[k].innerHTML + ":");
+							document.getElementById('selectFloor').innerHTML += "<option value='Floor " + (k+1) + "'>Floor " + (k+1) + "</option>";
+						}
+					}
+				}
+				//make the menu's contents the first floor
+				changeCont();
+			}
+			else
+			{
+				document.getElementById("content").innerHTML = "No Building Selected";
+				document.getElementById("building_name").innerHTML = "Building Name";
+				document.getElementById("selectFloor").innerHTML = "<option>No Building Selected</option>";
+			}
+		}
+
+		//this is the function to change building info
+		function changeCont()
+		{
+			counter = 0;
+			k = 0;
+			divstr = "";
+			Floor = document.getElementById('selectFloor').value.split(" ")[1];
+			//have to have this for "other floors"
+			if (Floor == "Floors")
+			{
+				Floor = content.length - 1;
+			}
+			else
+			{
+				Floor = Floor - 1;
+			}
+
+			document.getElementById("content").innerHTML = "";
+			cont = content[Floor].innerHTML.split(";");
+			//console.log(cont.length + " : " + cont[0] + " : *" + cont[cont.length-1] + "*");
+
+			//counter is just for text formatting...
+			for (k; k < ((cont.length - 2) / 2); k++)
+			{
+				divstr += "" + document.getElementById("content").innerHTML + cont[2 * k + 1] + " " + document.getElementById("content").innerHTML + cont[2 * k + 2] + "<br>";
+			}
+			//console.log("k: " + k);
+			document.getElementById("content").innerHTML = divstr;
 		}
 
 		window.onload = function(event)
 		{
-			iframe_loaded = setInterval(function() { addEventList(event) }, 100);
+			//document.getElementById("content").style.height = document.getElementsByTagName("body")[0].style.height - document.getElementById("imgFrame").style.height;
+			ifrm = document.getElementById('i_frame');
+			var max = 0;
+			doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
+			imageCount = ifrm.contentWindow.locations.length;
+			//console.log(doc);
+
+			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>What: " + ifrm.contentWindow.names[i] + "</span></b>";
+			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>When: " + ifrm.contentWindow.date[i] + "</span></b>";
+			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>Where: " + ifrm.contentWindow.locations[i] + "</span></b>"; 
+
+			for (each in ifrm.contentWindow)
+			{
+				if (each.includes('circle_marker_'))
+				{
+					cms[each] = ifrm.contentWindow[each];
+					cms[each].openPopup();
+					bname = doc.getElementsByClassName("leaflet-popup-content-wrapper")[max].children[0].children[0].getElementsByTagName('h1')[0].innerText.toLowerCase();
+					bnArray.push(bname);
+					cms[each]._map.closePopup();
+					bn[bname] = each;
+					max++;
+				}
+			}
+			
+			doc.addEventListener("click", function() { popMenu(); });
 
 			for(var k = 0; k < imageCount; k++)
 			{
-				z = k+1;
-				radStr  += "<input type='radio' name='imgNum' value='" + z + "' onclick='clearInterval(Imageval); i = " + z + "; changeImage(); Imageval = setInterval(function(){ changeImage() }, time);'>";
+				//z = k+1;
+				radStr  += "<input type='radio' name='imgNum' value='" + k + "' onclick='clearInterval(Imageval); i = " + k + "; changeImage(); Imageval = setInterval(function(){ changeImage() }, time);'>";
 			}
 			document.getElementById('selectorFrame').innerHTML = radStr;
-			document.getElementsByName('imgNum')[i - 1].checked = true;
+			document.getElementsByName('imgNum')[i].checked = true;
 			i++;
 			Imageval = setInterval(function(){ changeImage() }, time);
 		}
 
+		function imageExists(image_url)
+		{
+
+			var http = new XMLHttpRequest();
+
+
+			http.open('HEAD', image_url, false);
+
+			http.send();
+
+			return http.status != 404;
+		
+
+}
+
 		function changeImage()
 		{
-			document.getElementById('imgFrame').innerHTML = "<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='./" + i + ".jpg'>";
-			document.getElementsByName('imgNum')[i - 1].checked = true;
-			if (i < imageCount)
+			imgcheck = imageExists('../eventimage/' + i + '.jpg');
+			if (imgcheck == true)
+			{
+				document.getElementById('imgFrame').innerHTML = "<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='../eventimage/" + i + ".jpg'>";
+			}
+			else
+			{
+				document.getElementById('imgFrame').innerHTML = "<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='./UTsquarelogo.jpg'>";
+			}
+			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>What: " + ifrm.contentWindow.names[i] + "</span></b>";
+			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>When: " + ifrm.contentWindow.date[i] + "</span></b>";
+			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>Where: " + ifrm.contentWindow.locations[i] + "</span></b>"; 
+			document.getElementsByName('imgNum')[i].checked = true;
+			if (i + 1 < imageCount)
 			{
 				i++;
 			}
 			else
 			{
-				i = 1;
+				i = 0;
 			}
 		}
 	</script>

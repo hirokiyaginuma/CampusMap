@@ -4,7 +4,8 @@ import socketserver
 import threading
 
 PORT = 8080
-DIRECTORY = os.getcwd() + '\\mapfile\\map'
+DIRECTORY = os.getcwd() + '\\mapfile'
+
 
 class WebServer():
     class Handler(http.server.SimpleHTTPRequestHandler):
@@ -22,6 +23,7 @@ class WebServer():
     def stopServer(self):
         self.httpd.shutdown()
         self.httpd.server_close()
+
 
 if __name__ == '__main__':
     webserver = WebServer()

@@ -12,10 +12,9 @@ class Event():
         self.eventLocation = list()
         self.imageURL = list()
         self.url = "https://uttyler.campuslabs.com/engage/events"
+        self.eventListPath_ = os.getcwd() + '\\mapfile\\event\\'
         self.imageLocation_ = os.getcwd() + '\\mapfile\\eventimage\\'
         self.geckodriverPath_ = os.getcwd() + '\\mapfile\\geckodriver-v0.26.0-win64\\geckodriver.exe'
-        self.getEvent()
-        self.downloadImage()
 
     def getEvent(self):
         options = Options()
@@ -44,6 +43,30 @@ class Event():
                 self.imageURL.append(z[0])
             else:
                 self.imageURL.append(None)
+
+        with open(self.eventListPath_ + 'name.txt', 'w') as fw:
+            fw.writelines("%s\n" % place for place in self.eventName)
+        with open(self.eventListPath_ + 'date.txt', 'w') as fw:
+            fw.writelines("%s\n" % place for place in self.eventDate)
+        with open(self.eventListPath_ + 'location.txt', 'w') as fw:
+            fw.writelines("%s\n" % place for place in self.eventLocation)
+
+    def readList(self):
+        with open(self.eventListPath_ + 'name.txt', 'r') as fw:
+            filecontents = fw.readlines()
+            for line in filecontents:
+                current_place = line[:-1]
+                self.eventName.append(current_place)
+        with open(self.eventListPath_ + 'date.txt', 'r') as fw:
+            filecontents = fw.readlines()
+            for line in filecontents:
+                current_place = line[:-1]
+                self.eventDate.append(current_place)
+        with open(self.eventListPath_ + 'location.txt', 'r') as fw:
+            filecontents = fw.readlines()
+            for line in filecontents:
+                current_place = line[:-1]
+                self.eventLocation.append(current_place)
 
     def downloadImage(self):
         self.deleteImage()

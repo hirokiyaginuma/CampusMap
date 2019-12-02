@@ -1,13 +1,14 @@
 import os
 import folium
 import csv
-from selenium import webdriver
+from bs4 import BeautifulSoup
+from event import Event
 
 
 class MapConstructor:
     def __init__(self):
         self.temp = 0
-        self.mapfilepath_ = os.getcwd() + '\\mapfile'
+        self.mapfilepath_ = os.getcwd() + '\\mapfile\\map'
 
         # Lists of: building codes, room numbers, room types read directly from file.
         # Room floor list is extrapolated from first digit of room number
@@ -17,6 +18,28 @@ class MapConstructor:
         self.roomFloor = []
 
         self.eventdivs = []
+
+        # self.readEvent()
+
+    def scriptEvent(self):
+        event = Event()
+        event.readList()
+
+        with open(self.mapfilepath_ + '\\map.html') as map:
+            text = map.read()
+            self.soup = BeautifulSoup(text, 'lxml')
+
+        eventScript = self.soup.find_all('script', id="eventvars")
+
+        for script in eventScript:
+            script.extract()
+
+        new_link = self.soup.new_tag("script", id="eventvars")
+        new_link.string = "\nvar names = " + str(event.eventName) + "; \nvar date = " + str(event.eventDate) + ";" + " \nvar locations = " + str(event.eventLocation) + ";"
+        self.soup.body.append(new_link)
+
+        with open(self.mapfilepath_ + '\\map.html', 'w') as map:
+            map.write(str(self.soup))
 
     def getMapPath(self):
         return self.mapfilepath_ + '\\map.html'
@@ -96,7 +119,7 @@ class MapConstructor:
             fw.write(html)
             print('HTML file for ' + buildingName + ' created')
 
-    def eventScraper(self):
+    '''def eventScraper(self):
 
         url = 'https://uttyler.campuslabs.com/engage/events/'
 
@@ -105,8 +128,6 @@ class MapConstructor:
         driver.get(url)
 
         edl = driver.find_element_by_id("event-discovery-list").find_elements_by_tag_name("a")
-
-        urlList = []
 
         eventhtml = ''
 
@@ -117,32 +138,41 @@ class MapConstructor:
 
         with open(self.mapfilepath_ + '\\eventsList' + '.html', 'w') as fw:
             fw.write(eventhtml)
-            print('HTML file for events' + ' created')
+            print('HTML file for events' + ' created')'''
 
     def createMap(self):
         # UT lat, lon
-        UTTCoords = (32.3158, -95.2544)
+        UTTCoords = (32.315950, -95.252574)
 
         # Create map object
-        UTmap = folium.Map(location=UTTCoords, zoom_start=16, tiles="OpenStreetMap", min_zoom=16, min_lat=32.309790,
+        UTmap = folium.Map(location=[32.316137, -95.250997], zoom_start=17, tiles="OpenStreetMap", min_zoom=16,
+                           min_lat=32.309790,
                            max_lat=32.32124, min_lon=-95.239071, max_lon=-95.260618, max_bounds=True, zoom_control=True)
 
-        # Event Dummy Point
-        dt = ''
-        for div in self.eventdivs:
-            dt += '$' + str(div)
+        # UTmap.get_root().html.add_child(folium.Element(self.script_str))
 
-        divtxt = folium.Html(dt, script=True)
-        divWindow = folium.Popup(divtxt, max_width=0)
-        folium.CircleMarker(location=[32.321563, -95.258683], tooltip='EventDivs',
-                            radius=10, color='black', weight=0, fill_color='Green', fill_opacity=0.2, fill=False,
-                            popup=divWindow).add_to(UTmap)
+        # #Float UT Tyler logo
+        #
+        # imagefile = 'mapfile/img/UTsquarelogo.PNG'
+        # FloatImage(imagefile,).add_to(UTmap)
+        #
+
+        # #Event Dummy Point
+        # dt = ''
+        # for div in self.eventdivs:
+        #     dt += '$' + str(div)
+        #
+        # divtxt = folium.Html(dt, script=True)
+        # divWindow = folium.Popup(divtxt, max_width=0)
+        # folium.CircleMarker(location=[32.321563,-95.258683], tooltip='EventDivs',
+        #                           radius=10, color='black', weight=0, fill_color='Green', fill_opacity=0.2, fill=False,
+        #                           popup=divWindow).add_to(UTmap)
 
         # You are here
         hereTxt = folium.Html('You are here!', script=True)
         hereWindow = folium.Popup(hereTxt, max_width=300)
         hereIcon = folium.Icon(color='red', icon='info-sign')
-        folium.Marker(location=[32.315950, -95.252574], popup=hereWindow, icon=hereIcon).add_to(UTmap)
+        folium.Marker(location=UTTCoords, popup=hereWindow, icon=hereIcon).add_to(UTmap)
 
         # folium.LayerControl().add_to(UTmap)
         # If we add other layers we can turn this back on
@@ -154,13 +184,13 @@ class MapConstructor:
 
         ARChtml = ''
 
-        with open('mapfile/roomList/ARC.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/ARC.html', 'r') as CBH:
             for line in CBH:
                 ARChtml += line
 
         arcTxt = folium.Html(ARChtml, script=True)
 
-        arcWindow = folium.Popup(html=arcTxt, parse_html=True)
+        arcWindow = folium.Popup(html=arcTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         ARC = folium.CircleMarker(location=[32.315254, -95.258043], tooltip='Fine Arts Complex',
@@ -173,13 +203,13 @@ class MapConstructor:
 
         BEPhtml = ''
 
-        with open('mapfile/roomList/BEP.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/BEP.html', 'r') as CBH:
             for line in CBH:
                 BEPhtml += line
 
         bepTxt = folium.Html(BEPhtml, script=True)
 
-        bepWindow = folium.Popup(html=bepTxt, parse_html=True)
+        bepWindow = folium.Popup(html=bepTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         BEP = folium.CircleMarker(location=[32.317267, -95.252032], tooltip='Biology, Education, Psychology',
@@ -192,13 +222,13 @@ class MapConstructor:
 
         BRBhtml = ''
 
-        with open('mapfile/roomList/BRB.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/BRB.html', 'r') as CBH:
             for line in CBH:
                 BRBhtml += line
 
         brbTxt = folium.Html(BRBhtml, script=True)
 
-        brbWindow = folium.Popup(html=brbTxt, parse_html=True)
+        brbWindow = folium.Popup(html=brbTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         BRB = folium.CircleMarker(location=[32.317341, -95.251512], tooltip='Braithwaite Business Administration',
@@ -211,13 +241,13 @@ class MapConstructor:
 
         CAShtml = ''
 
-        with open('mapfile/roomList/CAS.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/CAS.html', 'r') as CBH:
             for line in CBH:
                 CAShtml += line
 
         casTxt = folium.Html(CAShtml, script=True)
 
-        casWindow = folium.Popup(html=casTxt, parse_html=True)
+        casWindow = folium.Popup(html=casTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         CAS = folium.CircleMarker(location=[32.317285, -95.254262], tooltip='College of Arts & Science',
@@ -230,13 +260,13 @@ class MapConstructor:
 
         COBhtml = ''
 
-        with open('mapfile/roomList/COB.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/COB.html', 'r') as CBH:
             for line in CBH:
                 COBhtml += line
 
         cobTxt = folium.Html(COBhtml, script=True)
 
-        cobWindow = folium.Popup(html=cobTxt, parse_html=True)
+        cobWindow = folium.Popup(html=cobTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         COB = folium.CircleMarker(location=[32.313234, -95.251733], tooltip='Soules College of Business and Technology',
@@ -249,13 +279,13 @@ class MapConstructor:
 
         FAChtml = ''
 
-        with open('mapfile/roomList/FAC.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/FAC.html', 'r') as CBH:
             for line in CBH:
                 FAChtml += line
 
         facTxt = folium.Html(FAChtml, script=True)
 
-        facWindow = folium.Popup(html=facTxt, parse_html=True)
+        facWindow = folium.Popup(html=facTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         FAC = folium.CircleMarker(location=[32.318527, -95.251473],
@@ -269,13 +299,13 @@ class MapConstructor:
 
         HPChtml = ''
 
-        with open('mapfile/roomList/HPC.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/HPC.html', 'r') as CBH:
             for line in CBH:
                 HPChtml += line
 
         hpcTxt = folium.Html(HPChtml, script=True)
 
-        hpcWindow = folium.Popup(html=hpcTxt, parse_html=True)
+        hpcWindow = folium.Popup(html=hpcTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         HPC = folium.CircleMarker(location=[32.314886, -95.249144],
@@ -289,13 +319,13 @@ class MapConstructor:
 
         HPRhtml = ''
 
-        with open('mapfile/roomList/HPR.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/HPR.html', 'r') as CBH:
             for line in CBH:
                 HPRhtml += line
 
         hprTxt = folium.Html(HPRhtml, script=True)
 
-        hprWindow = folium.Popup(html=hprTxt, parse_html=True)
+        hprWindow = folium.Popup(html=hprTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         HPR = folium.CircleMarker(location=[32.316435, -95.252284],
@@ -309,13 +339,13 @@ class MapConstructor:
 
         ICBhtml = ''
 
-        with open('mapfile/roomList/ICB.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/ICB.html', 'r') as CBH:
             for line in CBH:
                 ICBhtml += line
 
         icbTxt = folium.Html(ICBhtml, script=True)
 
-        icbWindow = folium.Popup(html=icbTxt, parse_html=True)
+        icbWindow = folium.Popup(html=icbTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         ICB = folium.CircleMarker(location=[32.311684, -95.241491],
@@ -329,13 +359,13 @@ class MapConstructor:
 
         LIBhtml = ''
 
-        with open('mapfile/roomList/LIB.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/LIB.html', 'r') as CBH:
             for line in CBH:
                 LIBhtml += line
 
         libTxt = folium.Html(LIBhtml, script=True)
 
-        libWindow = folium.Popup(html=libTxt, parse_html=True)
+        libWindow = folium.Popup(html=libTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         LIB = folium.CircleMarker(location=[32.315711, -95.254307],
@@ -349,13 +379,13 @@ class MapConstructor:
 
         ORHhtml = ''
 
-        with open('mapfile/roomList/ORH.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/ORH.html', 'r') as CBH:
             for line in CBH:
                 ORHhtml += line
 
         OrnelasTxt = folium.Html(ORHhtml, script=True)
 
-        OrnelasWindow = folium.Popup(html=OrnelasTxt, parse_html=True)
+        OrnelasWindow = folium.Popup(html=OrnelasTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         ORH = folium.CircleMarker(location=[32.314358, -95.251427], tooltip='Ornelas Residence Hall',
@@ -368,13 +398,13 @@ class MapConstructor:
 
         PHEhtml = ''
 
-        with open('mapfile/roomList/PHE.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/PHE.html', 'r') as CBH:
             for line in CBH:
                 PHEhtml += line
 
         pheTxt = folium.Html(PHEhtml, script=True)
 
-        pheWindow = folium.Popup(html=pheTxt, parse_html=True)
+        pheWindow = folium.Popup(html=pheTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         PHE = folium.CircleMarker(location=[32.314759, -95.250644], tooltip='Physical and Health Education Building',
@@ -387,13 +417,13 @@ class MapConstructor:
 
         RBNhtml = ''
 
-        with open('mapfile/roomList/RBN.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/RBN.html', 'r') as CBH:
             for line in CBH:
                 RBNhtml += line
 
         rbnTxt = folium.Html(RBNhtml, script=True)
 
-        rbnWindow = folium.Popup(html=rbnTxt, parse_html=True)
+        rbnWindow = folium.Popup(html=rbnTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         RBN = folium.CircleMarker(location=[32.317947, -95.253157], tooltip='Ratliff Building North',
@@ -406,13 +436,13 @@ class MapConstructor:
 
         RBShtml = ''
 
-        with open('mapfile/roomList/RBS.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/RBS.html', 'r') as CBH:
             for line in CBH:
                 RBShtml += line
 
         rbnTxt = folium.Html(RBShtml, script=True)
 
-        rbnWindow = folium.Popup(html=rbnTxt, parse_html=True)
+        rbnWindow = folium.Popup(html=rbnTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         RBS = folium.CircleMarker(location=[32.317566, -95.253007], tooltip='Ratliff Building South',
@@ -425,13 +455,13 @@ class MapConstructor:
 
         STEhtml = ''
 
-        with open('mapfile/roomList/STE.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/STE.html', 'r') as CBH:
             for line in CBH:
                 STEhtml += line
 
         steTxt = folium.Html(STEhtml, script=True)
 
-        steWindow = folium.Popup(html=steTxt, parse_html=True)
+        steWindow = folium.Popup(html=steTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         STE = folium.CircleMarker(location=[32.315608, -95.251765], tooltip='James H. Stewart Administration Building',
@@ -444,13 +474,13 @@ class MapConstructor:
 
         UChtml = ''
 
-        with open('mapfile/roomList/UC.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/UC.html', 'r') as CBH:
             for line in CBH:
                 UChtml += line
 
         ucTxt = folium.Html(UChtml, script=True)
 
-        ucWindow = folium.Popup(html=ucTxt, parse_html=True)
+        ucWindow = folium.Popup(html=ucTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         UC = folium.CircleMarker(location=[32.315390, -95.250971], tooltip='University Center',
@@ -463,13 +493,13 @@ class MapConstructor:
 
         WTBhtml = ''
 
-        with open('mapfile/roomList/WTB.html', 'r') as CBH:
+        with open(self.mapfilepath_ + '/roomList/WTB.html', 'r') as CBH:
             for line in CBH:
                 WTBhtml += line
 
         wtbTxt = folium.Html(WTBhtml, script=True)
 
-        wtbWindow = folium.Popup(html=wtbTxt, parse_html=True)
+        wtbWindow = folium.Popup(html=wtbTxt, max_width=400, min_width=150, parse_html=True)
 
         # Clickable marker
         WTB = folium.CircleMarker(location=[32.314946, -95.254221], tooltip='W.T. Brookshire Hall',
@@ -484,5 +514,6 @@ class MapConstructor:
 if __name__ == '__main__':
     map = MapConstructor()
     map.readFile()
-    map.eventScraper()
+    # map.eventScraper()
     map.createMap()
+    map.scriptEvent()

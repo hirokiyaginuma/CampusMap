@@ -85,7 +85,7 @@ class Ui_HomeScreen(object):
         self.EventLayout.addWidget(self.eventLabel)
         self.eventImage = QtWidgets.QLabel(self.centralwidget)
         self.eventImage.setText("")
-        self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/0.jpg")) ##
+        # self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/0.jpg")) ##
         self.eventImage.setAlignment(QtCore.Qt.AlignCenter)
         self.eventImage.setObjectName("eventImage")
         self.EventLayout.addWidget(self.eventImage)
@@ -138,6 +138,13 @@ class Ui_HomeScreen(object):
         self.nextBotton.clicked.connect(self.eventNext)
         self.previousBotton.clicked.connect(self.eventPrevious)
 
+        try:
+            image = open(self.mapfilepath_ + "/eventimage/0.jpg")
+            self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/0.jpg"))  ##
+        except IOError:
+            self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/img/UTsquarelogo.png"))
+
+
     def retranslateUi(self, HomeScreen):
         _translate = QtCore.QCoreApplication.translate
         HomeScreen.setWindowTitle(_translate("HomeScreen", "Interactive Map - Home Screen"))
@@ -179,6 +186,7 @@ class Ui_HomeScreen(object):
 
     def getEvent(self):
         self.event = Event()
+        self.event.readList()
         self.eventCounter = 0
         self.event_name_str = "<html><head/><body><p><span style=\" font-size:16pt;\">" + self.event.eventName[
             self.eventCounter] + "</span></p></body></html>"
@@ -207,6 +215,12 @@ class Ui_HomeScreen(object):
 
         self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/" + str(self.eventCounter) + ".jpg"))
 
+        try:
+            image = open(self.mapfilepath_ + "/eventimage/" + str(self.eventCounter) + ".jpg")
+            self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/" + str(self.eventCounter) + ".jpg"))
+        except IOError:
+            self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/img/UTsquarelogo.png"))
+
     def eventPrevious(self):
         _translate = QtCore.QCoreApplication.translate
 
@@ -225,7 +239,11 @@ class Ui_HomeScreen(object):
         self.eventLocation.setText(_translate("HomeScreen", self.event_location_str))
         self.eventTime.setText(_translate("HomeScreen", self.event_date_str))
 
-        self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/" + str(self.eventCounter) + ".jpg"))
+        try:
+            image = open(self.mapfilepath_ + "/eventimage/" + str(self.eventCounter) + ".jpg")
+            self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/eventimage/" + str(self.eventCounter) + ".jpg"))
+        except IOError:
+            self.eventImage.setPixmap(QtGui.QPixmap(self.mapfilepath_ + "/img/UTsquarelogo.png"))
 
 
 if __name__ == "__main__":

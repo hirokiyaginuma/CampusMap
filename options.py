@@ -30,7 +30,7 @@ class Ui_OptionWindow(object):
     def retranslateUi(self, OptionWindow):
         _translate = QtCore.QCoreApplication.translate
         OptionWindow.setWindowTitle(_translate("OptionWindow", "Interactibe Map -Options"))
-        self.MapScreenBotton.setText(_translate("OptionWindow", "Map Screen"))
+        self.MapScreenBotton.setText(_translate("OptionWindow", "Get Event Informatiion"))
         self.HTMLBotton.setText(_translate("OptionWindow", "Create HTML file"))
 
 
