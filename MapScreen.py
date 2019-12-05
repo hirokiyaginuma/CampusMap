@@ -32,6 +32,7 @@ class Ui_MapScreen(object):
         QtCore.QMetaObject.connectSlotsByName(MapScreen)
 
         self.web = QWebEngineView()
+        self.web.page().profile().clearHttpCache()
         # self.url = QtCore.QUrl.fromLocalFile(self.maphtmlpath_)
         self.url = QtCore.QUrl(self.path_)
         self.web.load(self.url)
@@ -52,5 +53,5 @@ if __name__ == "__main__":
     MapScreen = QtWidgets.QMainWindow()
     ui = Ui_MapScreen()
     ui.setupUi(MapScreen)
-    MapScreen.show()
+    MapScreen.showFullScreen()
     sys.exit(app.exec_())

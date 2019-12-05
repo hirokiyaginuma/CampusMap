@@ -23,7 +23,7 @@
 			<br><b>Rooms:</b> <div id="content" style="overflow: auto; height: 150px;">No Building Selected</div>
 		</div>
 		<div id='imgFrame' style="width: 400px; background-color: #002d72; position: fixed; bottom: 20; left: 0;">
-			<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0; background-color: #002d72' src='../eventimage/0.jpg'>
+			<img onerror="this.src = './UTsquarelogo.jpg';" style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0; background-color: #002d72' src='../eventimage/0.jpg'>
 		</div>
 		<div id='selectorFrame' style="height: 20px; width: 400px; background-color: black; position: fixed; bottom: 0; text-align: center; left: 0;">
 		</div>
@@ -48,6 +48,7 @@
 		var content;
 		var filtered;
 		var ifrm;
+		var imgurl = "./UTsquarelogo.jpg";
 		//use building name as [0] and building code as [1]
 		var buildNames = [];
 		document.getElementById("srchBuilding").addEventListener("input", function() { building_search(); });
@@ -214,36 +215,22 @@
 			Imageval = setInterval(function(){ changeImage() }, time);
 		}
 
-		function imageExists(image_url)
+		/*function imageExists(image_url)
 		{
-
 			var http = new XMLHttpRequest();
-
-
 			http.open('HEAD', image_url, false);
-
 			http.send();
-
 			return http.status != 404;
-		
-
-}
+		}*/
 
 		function changeImage()
 		{
-			imgcheck = imageExists('../eventimage/' + i + '.jpg');
-			if (imgcheck == true)
-			{
-				document.getElementById('imgFrame').innerHTML = "<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='../eventimage/" + i + ".jpg'>";
-			}
-			else
-			{
-				document.getElementById('imgFrame').innerHTML = "<img style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='./UTsquarelogo.jpg'>";
-			}
+			document.getElementById('imgFrame').innerHTML = "<img onerror='this.src = imgurl;' style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0;' src='../eventimage/" + i + ".jpg'>";
 			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>What: " + ifrm.contentWindow.names[i] + "</span></b>";
 			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>When: " + ifrm.contentWindow.date[i] + "</span></b>";
 			document.getElementById('imgFrame').innerHTML += "<br><b><span style='color: #e35205'>Where: " + ifrm.contentWindow.locations[i] + "</span></b>"; 
 			document.getElementsByName('imgNum')[i].checked = true;
+
 			if (i + 1 < imageCount)
 			{
 				i++;
