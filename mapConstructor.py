@@ -119,27 +119,6 @@ class MapConstructor:
             fw.write(html)
             print('HTML file for ' + buildingName + ' created')
 
-    '''def eventScraper(self):
-
-        url = 'https://uttyler.campuslabs.com/engage/events/'
-
-        driver = webdriver.PhantomJS('mapfile/PhantomJS/phantomjs-2.1.1-windows/bin/phantomjs.exe')
-
-        driver.get(url)
-
-        edl = driver.find_element_by_id("event-discovery-list").find_elements_by_tag_name("a")
-
-        eventhtml = ''
-
-        for div in edl:
-            d1 = div.get_attribute('innerHTML')
-            self.eventdivs.append(d1)
-            eventhtml += d1
-
-        with open(self.mapfilepath_ + '\\eventsList' + '.html', 'w') as fw:
-            fw.write(eventhtml)
-            print('HTML file for events' + ' created')'''
-
     def createMap(self):
         # UT lat, lon
         UTTCoords = (32.315950, -95.252574)

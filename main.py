@@ -108,12 +108,15 @@ class Options(QtWidgets.QMainWindow, Ui_OptionWindow):
         event = Event()
         event.getEvent()
         event.downloadImage()
+        self.map = MapConstructor()
+        self.map.scriptEvent()
         self.dialog.show()
 
     def HTML(self):
         self.dialog = Dialog2()
         self.map = MapConstructor()
         self.map.createMap()
+        self.map.scriptEvent()
         self.dialog.show()
 
 
