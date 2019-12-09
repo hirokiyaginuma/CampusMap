@@ -8,8 +8,8 @@
 </head>
 <body>
 
-	<!--<iframe id="eventsSite" src="https://uttyler.campuslabs.com/engage/events/"></iframe>-->
 	<div id='menu' style="height: 100%; width: 400px; background-color: #e35205; position: fixed; bottom: 0; left: 0; display: inline-block;">
+		<img src="./header.png" style="width: 400px;">
 		<input id="srchBuilding" type="text" placeholder="Search for building..." style="width: 400px; height: 20px;"></input>
 		<select id="bsout" onclick='OpenPopUp();' style="width: 400px;">
 			<option>Nothing Has Been Searched For</option>
@@ -20,7 +20,7 @@
 			<br><select onchange="changeCont();" id="selectFloor" style="width: 400px;">
 				<option>No Building Selected</option>
 				</select>
-			<br><b>Rooms:</b> <div id="content" style="overflow: auto; height: 150px;">No Building Selected</div>
+			<br><b>Rooms:</b> <div id="content" style="overflow: auto; height: 100px;">No Building Selected</div>
 		</div>
 		<div id='imgFrame' style="width: 400px; background-color: #002d72; position: fixed; bottom: 20; left: 0;">
 			<img onerror="this.src = './UTsquarelogo.jpg';" style='width: 100%; display: block; margin-left: auto; margin-right: auto; left: 0; background-color: #002d72' src='../eventimage/0.jpg'>

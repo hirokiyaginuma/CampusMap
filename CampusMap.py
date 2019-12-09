@@ -115,6 +115,7 @@ class Options(QtWidgets.QMainWindow, Ui_OptionWindow):
     def HTML(self):
         self.dialog = Dialog2()
         self.map = MapConstructor()
+        self.map.readFile()
         self.map.createMap()
         self.map.scriptEvent()
         self.dialog.show()
@@ -128,7 +129,7 @@ class HomeScreen(QtWidgets.QMainWindow, Ui_HomeScreen):
 
     def mapBotton(self):
         self.mapscreen = MapScreen()
-        self.mapscreen.showFullScreen()
+        self.mapscreen.showMaximized()
         self.hide()
 
 

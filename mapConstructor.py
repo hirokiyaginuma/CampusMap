@@ -493,6 +493,5 @@ class MapConstructor:
 if __name__ == '__main__':
     map = MapConstructor()
     map.readFile()
-    # map.eventScraper()
     map.createMap()
     map.scriptEvent()

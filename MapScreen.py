@@ -1,11 +1,11 @@
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtWebEngineWidgets import *
 
 
 class Ui_MapScreen(object):
     def __init__(self):
-        self.maphtmlpath_ = os.getcwd() + '\\mapfile\\map\\events.html'
+        # self.maphtmlpath_ = os.getcwd() + '\\mapfile\\map\\events.html'
         self.path_ = "http://localhost:8080/map/events.html"
 
 
@@ -34,6 +34,10 @@ class Ui_MapScreen(object):
         self.web = QWebEngineView()
         self.web.page().profile().clearHttpCache()
         # self.url = QtCore.QUrl.fromLocalFile(self.maphtmlpath_)
+        self.web.settings().setAttribute(QWebEngineSettings.PluginsEnabled, True)
+        self.web.settings().setAttribute(QWebEngineSettings.JavascriptEnabled, True)
+        self.web.settings().setAttribute(QWebEngineSettings.FullScreenSupportEnabled, True)
+        self.web.page().fullScreenRequested.connect(QWebEngineFullScreenRequest.accept)
         self.url = QtCore.QUrl(self.path_)
         self.web.load(self.url)
 
